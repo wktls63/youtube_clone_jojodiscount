@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+    <link rel="stylesheet" href="header.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="Yt-Button">
+            <div class="Icon">
+                <img class="hamburger" src="hamburger.png" alt="">
+            </div>
+            <div class="logo">
+                <img class="youtube-logo" src="Youtube-Logo.png" alt="">"
+            </div>
+
+        </div>
+        <div class="searchbox">
+            <input class="search-bar" type="text" placeholder="Search">
+            <button class="search-button">
+                <img class="search-icon" src="search.png" alt="">
+                <div class="tooltip">Search</div>
+            </button>
+            <button class="voice-search-button">
+                <img class="voice-search-icon" src="mic.png" alt="">
+                <div class="tooltip">Search with your voice</div>
+            </button>
+        </div>
+        <div class="Profile">
+            <div class="Creat"></div>
+            <div class="Apps"></div>
+            <div class="Notifications"></div>
+            <div class="Profile"></div>
+        </div>
+    </header>
+
+    <nav class="Top-Menu">
+        <div class="Item"></div>
+        <div class="Item"></div>
+        <div class="Item"></div>
+        <div class="Item"></div>
+        <div class="Item"></div>
+        <div class="Item"></div>
+        <div class="Item"></div>
+        <div class="Item"></div>
+        <div class="Item"></div>
+        <div class="Item"></div>
+        <div class="Item"></div>
+        <div class="Item"></div>
+        <div class="Item"></div>
+        <div class="Item"></div>
+        <div class="Item"></div>
+        <div class="Item"></div>
+        <div class="Item"></div>
+        <div class="Item"></div>
+        <div class="Item"></div>
+        <div class="Item"></div>
+        <div class="Item"></div>
+        <div class="Item"></div>
+        <div class="Item"></div>
+        <div class="Item"></div>
+        <div class="Item"></div>
+        <div class="Item"></div>
+        <div class="Item"></div>
+        <div class="Item"></div>
+        <div class="Item"></div>
+        <div class="Icon"></div> <!--헤더 부분에도 Icon 있음-->
+    </nav>
+
+    <main class="Thumbnail">
+        <div class="Row">
+            <div class="Thumbnail-Item">
+                <div class="Thumbnail">
+                    <div class="Profile-pic"></div>
+                    <div class="Desc">
+                        <div class="Title"></div>
+                        <div class="Info">
+                            <div class="Chanel-Name"></div>
+                            <div class="Time"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Images">
+                    <button onclick="getChannelVideo(document.getElementById('youtubeChannel').value)">유튜브 채널정보
+                        가져오기</button>
+                    <div class="VideoTime"></div>
+                    <div class="Thumbnail-Images"></div>
+                </div>
+            </div>
+            <div class="Thumbnail-Item">
+                <div class="Thumbnail">
+                    <div class="Profile-pic">
+                        <button onclick="getChannelVideo(document.getElementById('youtubeChannel').value)">유튜브 채널정보
+                            가져오기</button>
+                    </div>
+                    <div class="Desc">
+                        <div class="Title">
+                            <button onclick="getChannelVideo(document.getElementById('youtubeChannel').value)">유튜브 채널정보
+                                가져오기</button>
+                        </div>
+                        <div class="Info">
+                            <div class="Chanel-Name">
+                                <button onclick="getChannelVideo(document.getElementById('youtubeChannel').value)">유튜브
+                                    채널정보 가져오기</button>
+                            </div>
+                            <div class="Time"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Images">
+                    <div class="VideoTime"></div>
+                    <div class="Thumbnail-Images"></div>
+                </div>
+            </div>
+            <div class="Thumbnail-Item">
+                <div class="Thumbnail">
+                    <div class="Profile-pic"></div>
+                    <div class="Desc">
+                        <div class="Title"></div>
+                        <div class="Info">
+                            <div class="Chanel-Name"></div>
+                            <div class="Time"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Images">
+                    <div class="VideoTime"></div>
+                    <div class="Thumbnail-Images"></div>
+                </div>
+            </div>
+            <div class="Thumbnail-Item">
+                <div class="Thumbnail">
+                    <div class="Profile-pic"></div>
+                    <div class="Desc">
+                        <div class="Title"></div>
+                        <div class="Info">
+                            <div class="Chanel-Name"></div>
+                            <div class="Time"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Images">
+                    <div class="VideoTime"></div>
+                    <div class="Thumbnail-Images"></div>
+                </div>
+            </div>
+        </div>
+        <div class="Row">
+            <div class="Thumbnail-Item">
+                <div class="Thumbnail">
+                    <div class="Profile-pic"></div>
+                    <div class="Desc">
+                        <div class="Title"></div>
+                        <div class="Info">
+                            <div class="Chanel-Name"></div>
+                            <div class="Time"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Images">
+                    <div class="VideoTime"></div>
+                    <div class="Thumbnail-Images"></div>
+                </div>
+            </div>
+            <div class="Thumbnail-Item">
+                <div class="Thumbnail">
+                    <div class="Profile-pic"></div>
+                    <div class="Desc">
+                        <div class="Title"></div>
+                        <div class="Info">
+                            <div class="Chanel-Name"></div>
+                            <div class="Time"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Images">
+                    <div class="VideoTime"></div>
+                    <div class="Thumbnail-Images"></div>
+                </div>
+            </div>
+            <div class="Thumbnail-Item">
+                <div class="Thumbnail">
+                    <div class="Profile-pic"></div>
+                    <div class="Desc">
+                        <div class="Title"></div>
+                        <div class="Info">
+                            <div class="Chanel-Name"></div>
+                            <div class="Time"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Images">
+                    <div class="VideoTime"></div>
+                    <div class="Thumbnail-Images"></div>
+                </div>
+            </div>
+            <div class="Thumbnail-Item">
+                <div class="Thumbnail">
+                    <div class="Profile-pic"></div>
+                    <div class="Desc">
+                        <div class="Title"></div>
+                        <div class="Info">
+                            <div class="Chanel-Name"></div>
+                            <div class="Time"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Images">
+                    <div class="VideoTime"></div>
+                    <div class="Thumbnail-Images"></div>
+                </div>
+            </div>
+        </div>
+        <div class="Row">
+            <div class="Thumbnail-Item">
+                <div class="Thumbnail">
+                    <div class="Profile-pic"></div>
+                    <div class="Desc">
+                        <div class="Title"></div>
+                        <div class="Info">
+                            <div class="Chanel-Name"></div>
+                            <div class="Time"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Images">
+                    <div class="VideoTime"></div>
+                    <div class="Thumbnail-Images"></div>
+                </div>
+            </div>
+            <div class="Thumbnail-Item">
+                <div class="Thumbnail">
+                    <div class="Profile-pic"></div>
+                    <div class="Desc">
+                        <div class="Title"></div>
+                        <div class="Info">
+                            <div class="Chanel-Name"></div>
+                            <div class="Time"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Images">
+                    <div class="VideoTime"></div>
+                    <div class="Thumbnail-Images"></div>
+                </div>
+            </div>
+            <div class="Thumbnail-Item">
+                <div class="Thumbnail">
+                    <div class="Profile-pic"></div>
+                    <div class="Desc">
+                        <div class="Title"></div>
+                        <div class="Info">
+                            <div class="Chanel-Name"></div>
+                            <div class="Time"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Images">
+                    <div class="VideoTime"></div>
+                    <div class="Thumbnail-Images"></div>
+                </div>
+            </div>
+            <div class="Thumbnail-Item">
+                <div class="Thumbnail">
+                    <div class="Profile-pic"></div>
+                    <div class="Desc">
+                        <div class="Title"></div>
+                        <div class="Info">
+                            <div class="Chanel-Name"></div>
+                            <div class="Time"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Images">
+                    <div class="VideoTime"></div>
+                    <div class="Thumbnail-Images"></div>
+                </div>
+            </div>
+        </div>
+        <div class="Row">
+            <div class="Thumbnail-Item">
+                <div class="Thumbnail">
+                    <div class="Profile-pic"></div>
+                    <div class="Desc">
+                        <div class="Title"></div>
+                        <div class="Info">
+                            <div class="Chanel-Name"></div>
+                            <div class="Time"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Images">
+                    <div class="VideoTime"></div>
+                    <div class="Thumbnail-Images"></div>
+                </div>
+            </div>
+            <div class="Thumbnail-Item">
+                <div class="Thumbnail">
+                    <div class="Profile-pic"></div>
+                    <div class="Desc">
+                        <div class="Title"></div>
+                        <div class="Info">
+                            <div class="Chanel-Name"></div>
+                            <div class="Time"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Images">
+                    <div class="VideoTime"></div>
+                    <div class="Thumbnail-Images"></div>
+                </div>
+            </div>
+            <div class="Thumbnail-Item">
+                <div class="Thumbnail">
+                    <div class="Profile-pic"></div>
+                    <div class="Desc">
+                        <div class="Title"></div>
+                        <div class="Info">
+                            <div class="Chanel-Name"></div>
+                            <div class="Time"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Images">
+                    <div class="VideoTime"></div>
+                    <div class="Thumbnail-Images"></div>
+                </div>
+            </div>
+            <div class="Thumbnail-Item">
+                <div class="Thumbnail">
+                    <div class="Profile-pic"></div>
+                    <div class="Desc">
+                        <div class="Title"></div>
+                        <div class="Info">
+                            <div class="Chanel-Name"></div>
+                            <div class="Time"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Images">
+                    <div class="VideoTime"></div>
+                    <div class="Thumbnail-Images"></div>
+                </div>
+            </div>
+        </div>
+        <div class="Row">
+            <div class="Thumbnail-Item">
+                <div class="Thumbnail">
+                    <div class="Profile-pic"></div>
+                    <div class="Desc">
+                        <div class="Title"></div>
+                        <div class="Info">
+                            <div class="Chanel-Name"></div>
+                            <div class="Time"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Images">
+                    <div class="VideoTime"></div>
+                    <div class="Thumbnail-Images"></div>
+                </div>
+            </div>
+            <div class="Thumbnail-Item">
+                <div class="Thumbnail">
+                    <div class="Profile-pic"></div>
+                    <div class="Desc">
+                        <div class="Title"></div>
+                        <div class="Info">
+                            <div class="Chanel-Name"></div>
+                            <div class="Time"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Images">
+                    <div class="VideoTime"></div>
+                    <div class="Thumbnail-Images"></div>
+                </div>
+            </div>
+            <div class="Thumbnail-Item">
+                <div class="Thumbnail">
+                    <div class="Profile-pic"></div>
+                    <div class="Desc">
+                        <div class="Title"></div>
+                        <div class="Info">
+                            <div class="Chanel-Name"></div>
+                            <div class="Time"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Images">
+                    <div class="VideoTime"></div>
+                    <div class="Thumbnail-Images"></div>
+                </div>
+            </div>
+            <div class="Thumbnail-Item">
+                <div class="Thumbnail">
+                    <div class="Profile-pic"></div>
+                    <div class="Desc">
+                        <div class="Title"></div>
+                        <div class="Info">
+                            <div class="Chanel-Name"></div>
+                            <div class="Time"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Images">
+                    <div class="VideoTime"></div>
+                    <div class="Thumbnail-Images"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <aside class="Sidebar">
+        <div class="Top">
+            <div class="Menu">
+                <div class="Menu-Item">
+                    <div class="Icon"></div>
+                    <div class="Title"></div>
+                </div>
+            </div>
+            <div class="Menu">
+                <div class="Menu-Item">
+                    <div class="Icon"></div>
+                    <div class="Title"></div>
+                </div>
+            </div>
+            <div class="Menu">
+                <div class="Menu-Item">
+                    <div class="Icon"></div>
+                    <div class="Title"></div>
+                </div>
+            </div>
+        </div>
+        <div class="Top-2">
+            <div class="Menu">
+                <div class="Menu-Item">
+                    <div class="Icon"></div>
+                    <div class="Title"></div>
+                </div>
+            </div>
+            <div class="Menu">
+                <div class="Menu-Item">
+                    <div class="Icon"></div>
+                    <div class="Title"></div>
+                </div>
+            </div>
+            <div class="Menu">
+                <div class="Menu-Item">
+                    <div class="Icon"></div>
+                    <div class="Title"></div>
+                </div>
+            </div>
+            <div class="Menu">
+                <div class="Menu-Item">
+                    <div class="Icon"></div>
+                    <div class="Title"></div>
+                </div>
+            </div>
+            <div class="Menu">
+                <div class="Menu-Item">
+                    <div class="Icon"></div>
+                    <div class="Title"></div>
+                </div>
+            </div>
+            <div class="Menu">
+                <div class="Menu-Item">
+                    <div class="Icon"></div>
+                    <div class="Title"></div>
+                </div>
+            </div>
+        </div>
+        <div class="Subscriptions">
+            <div class="Menu-Title">
+                <div class="SUBSCRiPTIONS"></div>
+            </div>
+            <div class="Menu">
+                <div class="Menu-Item">
+                    <div class="Icon"></div>
+                    <div class="Title"></div>
+                </div>
+            </div>
+            <div class="Menu">
+                <div class="Menu-Item">
+                    <div class="Icon"></div>
+                    <div class="Title"></div>
+                </div>
+            </div>
+            <div class="Menu">
+                <div class="Menu-Item">
+                    <div class="Icon"></div>
+                    <div class="Title"></div>
+                </div>
+            </div>
+            <div class="Menu">
+                <div class="Menu-Item">
+                    <div class="Icon"></div>
+                    <div class="Title"></div>
+                </div>
+            </div>
+            <div class="Menu">
+                <div class="Menu-Item">
+                    <div class="Icon"></div>
+                    <div class="Title"></div>
+                </div>
+            </div>
+            <div class="Menu">
+                <div class="Menu-Item">
+                    <div class="Icon"></div>
+                    <div class="Title"></div>
+                </div>
+            </div>
+            <div class="Menu">
+                <div class="Menu-Item">
+                    <div class="Icon"></div>
+                    <div class="Title"></div>
+                </div>
+            </div>
+            <div class="Menu">
+                <div class="Menu-Item">
+                    <div class="Icon"></div>
+                    <div class="Title"></div>
+                </div>
+            </div>
+        </div>
+        <div class="More-From">
+            <div class="Menu-Title">
+                <div class="MFY"></div> <!--MORE FROM YOUTUBE-->
+            </div>
+            <div class="Menu">
+                <div class="Menu-Item">
+                    <div class="Icon"></div>
+                    <div class="Title"></div>
+                </div>
+            </div>
+            <div class="Menu">
+                <div class="Menu-Item">
+                    <div class="Icon"></div>
+                    <div class="Title"></div>
+                </div>
+            </div>
+            <div class="Menu">
+                <div class="Menu-Item">
+                    <div class="Icon"></div>
+                    <div class="Title"></div>
+                </div>
+            </div>
+            <div class="Menu">
+                <div class="Menu-Item">
+                    <div class="Icon"></div>
+                    <div class="Title"></div>
+                </div>
+            </div>
+        </div>
+        <div class="Bottom">
+            <div class="Menu">
+                <div class="Menu-Item">
+                    <div class="Icon"></div>
+                    <div class="Title"></div>
+                </div>
+            </div>
+            <div class="Menu">
+                <div class="Menu-Item">
+                    <div class="Icon"></div>
+                    <div class="Title"></div>
+                </div>
+            </div>
+            <div class="Menu">
+                <div class="Menu-Item">
+                    <div class="Icon"></div>
+                    <div class="Title"></div>
+                </div>
+            </div>
+            <div class="Menu">
+                <div class="Menu-Item">
+                    <div class="Icon"></div>
+                    <div class="Title"></div>
+                </div>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="Items">
+                <div class="Item"></div>
+                <div class="Item"></div>
+                <div class="Item"></div>
+                <div class="Item"></div>
+                <div class="Item"></div>
+                <div class="Item"></div>
+                <div class="Item"></div>
+            </div>
+            <div class="Items">
+                <div class="Item"></div>
+                <div class="Item"></div>
+                <div class="Item"></div>
+                <div class="Item"></div>
+                <div class="Item"></div>
+            </div>
+            <div class="Items">
+                <div class="Item"></div>
+            </div>
+        </div>
+    </aside>
+
+</body>
+<script src="video.js"></script>
+<script src="channel.js"></script>
+
+</html>

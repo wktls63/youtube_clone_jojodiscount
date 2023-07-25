@@ -1,20 +1,30 @@
 .header {
-    width: 1440px;
-    height: 56px;
-    flex-shrink: 0;
-    background: var(--background-color, #212121);
+    height: 55px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+
+    background-color: #212121FF;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #4d4d4d;
 }
 
 .Yt-Button {
-    float: left;
     display: inline-flex;
     padding-right: 0px;
     align-items: center;
 }
 
 .logo {
-
-    display: flex;
+    
     padding: 18px 14px 18px 16px;
     flex-direction: column;
     align-items: flex-start;
@@ -168,4 +178,48 @@
 .current-user-picture {
     height: 32px;
     border-radius: 16px;
+}
+
+
+.Profile{
+    margin-left: auto;
+    margin:auto 0;
+    display: flex;
+    flex-direction: row;
+    
+    width: 204px;
+    height: 40px;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.ProfileDetail{
+
+    float:right;
+    display: flex;
+    padding: 4px 14px;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.imgs{
+    width: 24px;
+    height: 24px;
+}
+
+.ProfileImg{
+    float:right;
+    display: flex;
+padding: 4px 14px;
+align-items: flex-start;
+gap: 10px;
+
+}
+.profileimg{
+    width: 32px;
+flex-shrink: 0;
+align-self: stretch;
+
 }

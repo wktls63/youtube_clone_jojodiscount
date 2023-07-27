@@ -1,22 +1,32 @@
 .Sidebar {
     color: white;
-    width: 250px;
+    width: 240px;
+    height: auto;
     background: #212121FF;
+    margin-top: 23px;
+    margin-left: -20px;
+    display: flex;
+    flex-direction: column;
 }
 
 .Top {
-    margin-top: 32px;
     margin-bottom: 30px;
+    padding-top: 10px;
+    padding-right: 0px;
+    padding-bottom: 12px;
+    padding-left: 0px;
 }
 
 .Top-2 {
     margin-bottom: 30px;
+    width:
 }
 
-.Subscriptions {}
-
-.More-From {
-    margin-bottom: 30px;
+.Top-Menu {
+    margin-top: 23px;
+    background-color: #212121;
+    display: flex;
+    flex-direction: column;
 }
 
 .Bottom {}
@@ -40,6 +50,10 @@
     flex-shrink: 0;
 }
 
+.Thumbnail {
+    background: #212121FF;
+}
+
 .Icon {}
 
 .Title {
@@ -58,3 +72,8 @@
 .Items {}
 
 .Item {}
+
+.Bottom {
+    width: 224px;
+    height: 160px;
+}

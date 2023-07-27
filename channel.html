@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Channel</title>
-    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="style/header.css">
+    <link rel="stylesheet" href="style/aside.css">
 </head>
 
 <body>
@@ -15,7 +16,7 @@
                 <img class="hamburger" src="icon/hamburger.png" alt="">
             </div>
             <div class="logo">
-                <img class="youtube-logo" src="icon/Youtube-Logo.png" alt="">"
+                <img class="youtube-logo" onclick="newPage()" src="icon/Youtube-Logo.png" alt="">"
             </div>
 
         </div>
@@ -53,20 +54,20 @@
                 <div class="Name"></div>
                 <div class="Pic"></div>
             </div>
-            <div class="Subscribes-Btn"></div>
+            <button class="Subscribes-Btn">SUBSCRIBES</button>
         </div>
         <div class="Channel-Toolbar">
             <div class="Toolbars">
-                <div class="Menu"></div>
-                <div class="Menu"></div>
-                <div class="Menu"></div>
-                <div class="Menu"></div>
-                <div class="Menu"></div>
-                <div class="Menu"></div>
+                <div class="Menu">HOME</div>
+                <div class="Menu">VIDEOS</div>
+                <div class="Menu">PLAYLISTS</div>
+                <div class="Menu">COMMUNITY</div>
+                <div class="Menu">CHANNEL</div>
+                <div class="Menu">ABOUT</div>
             </div>
             <div class="Search">
                 <div class="Icon"></div>
-                <div class="Btn"></div>
+                <button class="Btn"></button>
             </div>
         </div>
     </nav>
@@ -173,166 +174,216 @@
         <div class="Top">
             <div class="Menu">
                 <div class="Menu-Item">
-                    <div class="Icon"></div>
-                    <div class="Title"></div>
+                    <div class="Icon">
+                        <img class="home-fill" src="icon/home-fill.png" alt="">
+                    </div>
+                    <div class="Title">Home</div>
                 </div>
             </div>
             <div class="Menu">
                 <div class="Menu-Item">
-                    <div class="Icon"></div>
-                    <div class="Title"></div>
+                    <div class="Icon">
+                        <img class="explore" src="icon/explore.png" alt="">
+                    </div>
+                    <div class="Title">Explore</div>
                 </div>
             </div>
             <div class="Menu">
                 <div class="Menu-Item">
-                    <div class="Icon"></div>
-                    <div class="Title"></div>
+                    <div class="Icon">
+                        <img class="subscriptions" src="icon/subscriptions.png" alt="">
+                    </div>
+                    <div class="Title">Subscriptions</div>
                 </div>
             </div>
         </div>
         <div class="Top-2">
             <div class="Menu">
                 <div class="Menu-Item">
-                    <div class="Icon"></div>
-                    <div class="Title"></div>
+                    <div class="Icon">
+                        <img class="library" src="icon/library.png" alt="">
+                    </div>
+                    <div class="Title">Library</div>
                 </div>
             </div>
             <div class="Menu">
                 <div class="Menu-Item">
-                    <div class="Icon"></div>
-                    <div class="Title"></div>
+                    <div class="Icon">
+                        <img class="history" src="icon/history.png" alt="">
+                    </div>
+                    <div class="Title">History</div>
                 </div>
             </div>
             <div class="Menu">
                 <div class="Menu-Item">
-                    <div class="Icon"></div>
-                    <div class="Title"></div>
+                    <div class="Icon">
+                        <img class="yourVideos" src="icon/yourVideos.png" alt="">
+                    </div>
+                    <div class="Title">Your Videos</div>
                 </div>
             </div>
             <div class="Menu">
                 <div class="Menu-Item">
-                    <div class="Icon"></div>
-                    <div class="Title"></div>
+                    <div class="Icon">
+                        <img class="watchLater" src="icon/watchLater.png" alt="">
+                    </div>
+                    <div class="Title">Watch later</div>
                 </div>
             </div>
             <div class="Menu">
                 <div class="Menu-Item">
-                    <div class="Icon"></div>
-                    <div class="Title"></div>
+                    <div class="Icon">
+                        <img class="liked" src="icon/liked.png" alt="">
+                    </div>
+                    <div class="Title">Liked Videos</div>
                 </div>
             </div>
             <div class="Menu">
                 <div class="Menu-Item">
-                    <div class="Icon"></div>
-                    <div class="Title"></div>
+                    <div class="Icon">
+                        <img class="arrowBottom" src="icon/arrowBottom.png" alt="">
+                    </div>
+                    <div class="Title">Show More</div>
                 </div>
             </div>
         </div>
         <div class="Subscriptions">
             <div class="Menu-Title">
-                <div class="SUBSCRiPTIONS"></div>
+                <div class="SUBSCRiPTIONS">Subscriptions</div>
             </div>
             <div class="Menu">
                 <div class="Menu-Item">
-                    <div class="Icon"></div>
-                    <div class="Title"></div>
+                    <div class="Icon">
+                        <img class="james" src="icon/james.png" alt="">
+                    </div>
+                    <div class="Title">James Gouse</div>
                 </div>
             </div>
             <div class="Menu">
                 <div class="Menu-Item">
-                    <div class="Icon"></div>
-                    <div class="Title"></div>
+                    <div class="Icon">
+                        <img class="alan" src="icon/alan.png" alt="">
+                    </div>
+                    <div class="Title">Alan Cooper</div>
                 </div>
             </div>
             <div class="Menu">
-                <div class="Menu-Item">
-                    <div class="Icon"></div>
-                    <div class="Title"></div>
-                </div>
+                <div\ class="Menu-Item">
+                    <div class="Icon">
+                        <img class="marcus" src="icon/marcus.png" alt="">
+                    </div>
+                    <div class="Title">Marcus Levin</div>
             </div>
-            <div class="Menu">
-                <div class="Menu-Item">
-                    <div class="Icon"></div>
-                    <div class="Title"></div>
+        </div>
+        <div class="Menu">
+            <div class="Menu-Item">
+                <div class="Icon">
+                    <img class="alexis" src="icon/alexis.png" alt="">
                 </div>
+                <div class="Title">Alexis Sears</div>
             </div>
-            <div class="Menu">
-                <div class="Menu-Item">
-                    <div class="Icon"></div>
-                    <div class="Title"></div>
+        </div>
+        <div class="Menu">
+            <div class="Menu-Item">
+                <div class="Icon">
+                    <img class="jesica" src="icon/jesica.png" alt="">
                 </div>
+                <div class="Title">Jesica Lambert</div>
             </div>
-            <div class="Menu">
-                <div class="Menu-Item">
-                    <div class="Icon"></div>
-                    <div class="Title"></div>
+        </div>
+        <div class="Menu">
+            <div class="Menu-Item">
+                <div class="Icon">
+                    <img class="anna" src="icon/anna.png" alt="">
                 </div>
+                <div class="Title">Anna White</div>
             </div>
-            <div class="Menu">
-                <div class="Menu-Item">
-                    <div class="Icon"></div>
-                    <div class="Title"></div>
+        </div>
+        <div class="Menu">
+            <div class="Menu-Item">
+                <div class="Icon">
+                    <img class="skylar" src="icon/skylar.png" alt="">
                 </div>
+                <div class="Title">Skylar Dias</div>
             </div>
-            <div class="Menu">
-                <div class="Menu-Item">
-                    <div class="Icon"></div>
-                    <div class="Title"></div>
+        </div>
+        <div class="Menu">
+            <div class="Menu-Item">
+                <div class="Icon">
+                    <img class="arrowBottom" src="icon/arrowBottom.png" alt="">
                 </div>
+                <div class="Title">Show 13 more</div>
             </div>
+        </div>
         </div>
         <div class="More-From">
             <div class="Menu-Title">
-                <div class="MFY"></div> <!--MORE FROM YOUTUBE-->
+                <div class="MFY">MORE FROM YOUTUBE</div> <!--MORE FROM YOUTUBE-->
             </div>
             <div class="Menu">
                 <div class="Menu-Item">
-                    <div class="Icon"></div>
-                    <div class="Title"></div>
+                    <div class="Icon">
+                        <img class="premium" src="icon/premium.png" alt="">
+                    </div>
+                    <div class="Title">Youtube Premium</div>
                 </div>
             </div>
             <div class="Menu">
                 <div class="Menu-Item">
-                    <div class="Icon"></div>
-                    <div class="Title"></div>
+                    <div class="Icon">
+                        <img class="gaming" src="icon/gaming.png" alt="">
+                    </div>
+                    <div class="Title">Gaming</div>
                 </div>
             </div>
             <div class="Menu">
                 <div class="Menu-Item">
-                    <div class="Icon"></div>
-                    <div class="Title"></div>
+                    <div class="Icon">
+                        <img class="live" src="icon/live.png" alt="">
+                    </div>
+                    <div class="Title">Live</div>
                 </div>
             </div>
             <div class="Menu">
                 <div class="Menu-Item">
-                    <div class="Icon"></div>
-                    <div class="Title"></div>
+                    <div class="Icon">
+                        <img class="sports" src="icon/sports.png" alt="">
+                    </div>
+                    <div class="Title">Sports</div>
                 </div>
             </div>
         </div>
         <div class="Bottom">
             <div class="Menu">
                 <div class="Menu-Item">
-                    <div class="Icon"></div>
-                    <div class="Title"></div>
+                    <div class="Icon">
+                        <img class="settings" src="icon/settings.png" alt="">
+                    </div>
+                    <div class="Title">Settings</div>
                 </div>
             </div>
             <div class="Menu">
                 <div class="Menu-Item">
-                    <div class="Icon"></div>
-                    <div class="Title"></div>
+                    <div class="Icon">
+                        <img class="report" src="icon/report.png" alt="">
+                    </div>
+                    <div class="Title">Report history</div>
                 </div>
             </div>
             <div class="Menu">
                 <div class="Menu-Item">
-                    <div class="Icon"></div>
-                    <div class="Title"></div>
+                    <div class="Icon">
+                        <img class="help" src="icon/help.png" alt="">
+                    </div>
+                    <div class="Title">Help</div>
                 </div>
             </div>
             <div class="Menu">
                 <div class="Menu-Item">
-                    <div class="Icon"></div>
-                    <div class="Title"></div>
+                    <div class="Icon">
+                        <img class="feedback" src="icon/feedback.png" alt="">
+                    </div>
+                    <div class="Title">Send Feedback</div>
                 </div>
             </div>
         </div>
@@ -359,5 +410,6 @@
         </div>
     </aside>
 </body>
+<script src="js/location.js"></script>
 
 </html>

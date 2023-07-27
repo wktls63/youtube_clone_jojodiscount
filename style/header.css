@@ -1,3 +1,9 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+  }
+
 .header {
     height: 55px;
 
@@ -222,4 +228,57 @@ gap: 10px;
 flex-shrink: 0;
 align-self: stretch;
 
+}
+
+/* TopMenu CSS 작업 7.26 by. 박세용 */
+.Top-Menu {
+    width: 100%;
+    height: auto;
+    background: var(--border-color, #303030);
+    text-align: center;
+    margin-top: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+.Item {
+    display: inline-block;
+    padding: 8px 12px;
+    gap: 10px;
+    margin: 5px;
+
+    border-radius: 32px;
+    border: 0.3px solid var(--gray-color, #AAA);
+    background: var(--border-color, #303030);
+
+    color: var(--white-color, #FFF);
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+}
+
+
+.top-border {
+    width: 1200px;
+    height: 1px;
+
+    background: var(--border-color, #303030);
+}
+
+.bottom-border {
+    width: 1200px;
+    height: 1px;
+
+    background: var(--border-color, #303030);
+}
+.Icon {
+    display: inline-flex;
+    padding: 20px;
+    align-items: flex-start;
+    gap: 10px;
+    background: rgba(33, 33, 33, 0.90);
 }

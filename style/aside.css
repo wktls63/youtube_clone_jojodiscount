@@ -1,0 +1,95 @@
+.Sidebar {
+    color: white;
+    width: 240px;
+    height: auto;
+    background: #212121FF;
+    margin-top: 23px;
+    margin-left: -20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.Top {
+    margin-bottom: 30px;
+    padding-top: 10px;
+    padding-right: 0px;
+    padding-bottom: 12px;
+    padding-left: 0px;
+}
+
+.Top-2 {
+    margin-bottom: 30px;
+}
+
+.Top-Menu {
+    color: white;
+    margin-top: 23px;
+    margin-left: 220px;
+    margin-right: -50px;
+    margin-bottom: -20px;
+    background-color: #212121;
+    padding: 56px;
+}
+
+.Item {
+    margin: 0;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 12px;
+    padding-right: 12px;
+    text-align: center;
+    border: 0.3px solid #aaaaaa;
+    border-radius: 32px;
+    float: left;
+}
+
+.Bottom {}
+
+.Footer {}
+
+.Menu {}
+
+.Menu-Item {
+
+    margin-left: auto;
+    margin: auto 0;
+    display: flex;
+    flex-direction: row;
+
+    width: auto;
+    height: 40px;
+    justify-content: left;
+    align-items: flex-start;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.Thumbnail {
+    background: #212121FF;
+}
+
+.Icon {}
+
+.Title {
+    margin-left: 10px;
+}
+
+.Menu-Title {
+    margin-left: 5px;
+    margin-bottom: 10px;
+}
+
+.SUBSCRIPTIONS {}
+
+.MFY {}
+
+.Bottom {
+    width: 224px;
+    height: 160px;
+}
+
+.body {
+    body {
+        font-family: 'Noto Sans', 'Arial', sans-serif;
+    }
+}

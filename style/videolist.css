@@ -1,0 +1,52 @@
+/* 비디오 리스트들을 담는 통 */
+.Thumbnail{
+    display : flex;
+    flex-direction: row;
+    /* padding : 3%; */
+    color : white;
+}
+
+
+/* 아래는 비디오 리스트 각각의 성분들 */
+
+/* 큰 틀 */
+.Row{
+    width: 100px;
+    height: 100px;
+    padding : 45%;
+}
+/* 썸네일 */
+.Thumbnail-Images{
+    width: 276px;
+    height: 155px;
+    flex-shrink: 0;
+}
+
+/* 채널 프로파일 썸네일 */
+.Thumbnail-profile-pic{
+    display: flex;
+    width: 36px;
+    height: 36px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 24px;
+}
+
+/* 영상제목 */
+.Desc .Title{
+    color: var(--white-color, #FFF);
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+/* 영상설명 */
+.Desc .Info{
+    color: var(--gray-color, #AAA);
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}

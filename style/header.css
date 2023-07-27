@@ -282,3 +282,7 @@ align-self: stretch;
     gap: 10px;
     background: rgba(33, 33, 33, 0.90);
 }
+
+.mainpage{
+    display:flex;
+}

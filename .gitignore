@@ -1,2 +1,7 @@
 *.html
 *.js
+# Ignore the "js" folder and its contents
+/js/
+
+# Ignore the "aside.css" file
+aside.css

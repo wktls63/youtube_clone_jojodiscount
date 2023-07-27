@@ -1,0 +1,60 @@
+.Sidebar {
+    color: white;
+    width: 250px;
+    background: #212121FF;
+}
+
+.Top {
+    margin-top: 32px;
+    margin-bottom: 30px;
+}
+
+.Top-2 {
+    margin-bottom: 30px;
+}
+
+.Subscriptions {}
+
+.More-From {
+    margin-bottom: 30px;
+}
+
+.Bottom {}
+
+.Footer {}
+
+.Menu {}
+
+.Menu-Item {
+
+    margin-left: auto;
+    margin: auto 0;
+    display: flex;
+    flex-direction: row;
+
+    width: auto;
+    height: 40px;
+    justify-content: left;
+    align-items: flex-start;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.Icon {}
+
+.Title {
+    margin-left: 10px;
+}
+
+.Menu-Title {
+    margin-left: 5px;
+    margin-bottom: 10px;
+}
+
+.SUBSCRIPTIONS {}
+
+.MFY {}
+
+.Items {}
+
+.Item {}

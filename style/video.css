@@ -1,0 +1,52 @@
+/* home 화면 vide 호출 css 작성자 노경민 */
+
+/* 메인화면 틀 */
+.video-grid {
+    display : flex;
+    flex-direction: row;
+    /* padding : 3%; */
+    color : white;
+}
+
+/* 썸네일 */
+.thumbnail-row {
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.thumbnail {
+    width: 276px;
+    height: 155px;
+    flex-shrink: 0;
+}
+
+.video-info-grid {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+}
+
+
+/* 타이틀 채널정보 뷰 업데이트 시간 */
+
+.profile-picture {
+    width: 36px;
+    border-radius: 50px;
+}
+
+.video-author {
+    margin-bottom: 4px;
+}
+
+.video-title {
+    margin-top: 0;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    margin-bottom: 10px;
+}
+
+.video-author,
+.video-stats {
+    font-size: 12px;
+    color: #AAAAAA;
+}

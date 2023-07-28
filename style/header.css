@@ -1,7 +1,7 @@
 body, html {
     margin: 0;
     padding: 0;
-    background-color: #000;
+    background-color: #181818;
   }
 
 .header {
@@ -235,11 +235,11 @@ align-self: stretch;
     width: 100%;
     height: auto;
     background: var(--border-color, #303030);
-    text-align: center;
     margin-top: 55px;
     display: flex;
     align-items: center;
-    justify-content: center; 
+    justify-content: flex-start;
+    gap: 12px;
 }
 
 .Item {

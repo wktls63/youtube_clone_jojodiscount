@@ -16,7 +16,7 @@ function formatViews(views) {
   // displayVideoList() 함수 정의
   async function displayVideoList() {
     try {
-      const videoListContainer = document.getElementById('videoList');
+      const videoListContainer = document.getElementById('video-preview');
       let videoListHtml = ''; // 비디오 정보를 누적할 빈 문자열
   
       for (let videoId = 0; videoId <= 20; videoId++) {
@@ -27,19 +27,24 @@ function formatViews(views) {
   
         // videoInfo를 사용하여 각각의 비디오 정보를 표시하는 HTML 코드를 생성
         const videoItemHtml = `
-          <div>
-            <h2>${videoInfo.video_title}</h2>
-            <p>Channel: ${videoInfo.video_channel}</p>
-            <p>조회수: ${formattedViews} 회</p>
-            <p>${videoInfo.upload_date}</p>
-            <img src="${videoInfo.image_link}" alt="Thumbnail" />
+          <div class="thumbnail-row">
+            <img class="thumbnail" src="${videoInfo.image_link}" alt="Thumbnail" />
+          </div>
+          <div class="video-info-grid">
+            <div class="channel-picture">
+              <img class="profile-picture" alt="Thumbnail" src="icon/alan.png" />
+            </div>
+            <div class="video-info">
+              <p class="video-title">${videoInfo.video_title}</p>
+              <p class="video-author">Channel: ${videoInfo.video_channel}</p>
+              <p class="video-stats">조회수: ${formattedViews} 회 &#183; ${videoInfo.upload_date}</p>
+            </div>
           </div>
         `;
-  
         // 생성된 HTML 코드를 videoListHtml에 누적.
         videoListHtml += videoItemHtml;
       }
-  
+      console.log(videoListHtml)
       // videoListHtml을 videoListContainer의 내부 콘텐츠로 설정
       videoListContainer.innerHTML = videoListHtml;
     } catch (error) {

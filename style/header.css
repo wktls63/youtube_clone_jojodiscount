@@ -1,8 +1,9 @@
-body, html {
+body,
+html {
     margin: 0;
     padding: 0;
     background-color: #181818;
-  }
+}
 
 .header {
     height: 55px;
@@ -30,7 +31,7 @@ body, html {
 }
 
 .logo {
-    
+
     padding: 18px 14px 18px 16px;
     flex-direction: column;
     align-items: flex-start;
@@ -40,6 +41,7 @@ body, html {
 .youtube-logo {
     width: 90px;
     height: 20px;
+    cursor: pointer;
 }
 
 .Icon {
@@ -187,12 +189,12 @@ body, html {
 }
 
 
-.Profile{
+.Profile {
     margin-left: auto;
-    margin:auto 0;
+    margin: auto 0;
     display: flex;
     flex-direction: row;
-    
+
     width: 204px;
     height: 40px;
     justify-content: center;
@@ -201,32 +203,33 @@ body, html {
     flex-shrink: 0;
 }
 
-.ProfileDetail{
+.ProfileDetail {
 
-    float:right;
+    float: right;
     display: flex;
     padding: 4px 14px;
     align-items: flex-start;
     gap: 10px;
 }
 
-.imgs{
+.imgs {
     width: 24px;
     height: 24px;
 }
 
-.ProfileImg{
-    float:right;
+.ProfileImg {
+    float: right;
     display: flex;
-padding: 4px 14px;
-align-items: flex-start;
-gap: 10px;
+    padding: 4px 14px;
+    align-items: flex-start;
+    gap: 10px;
 
 }
-.profileimg{
+
+.profileimg {
     width: 32px;
-flex-shrink: 0;
-align-self: stretch;
+    flex-shrink: 0;
+    align-self: stretch;
 
 }
 
@@ -275,6 +278,7 @@ align-self: stretch;
 
     background: var(--border-color, #303030);
 }
+
 .Icon {
     display: inline-flex;
     padding: 20px;
@@ -283,6 +287,6 @@ align-self: stretch;
     background: rgba(33, 33, 33, 0.90);
 }
 
-.mainpage{
-    display:flex;
+.mainpage {
+    display: flex;
 }

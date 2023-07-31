@@ -1,0 +1,39 @@
+.comments-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+#comment-input {
+
+    width: 70%;
+    padding: 8px;
+    margin-bottom: 8px;
+}
+
+
+#post-comment {
+    float: right;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+button {
+    padding: 8px 16px;
+    background-color: gray;
+    color: black;
+    border: none;
+    cursor: pointer;
+}
+
+.editing {
+    background-color: #f0f0f0;
+}

@@ -71,6 +71,7 @@ body, html {
     height: 36px;
     padding-left: 10px;
     font-size: 16px;
+    color: whitesmoke;    /* search-bar 안에 텍스트 입력시 색상 변경 작업 추가 07.31 by. 박세용 */
     border: 1px solid #4d4d4d;
     border-radius: 2px;
     box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05);
@@ -261,6 +262,11 @@ align-self: stretch;
     text-align: center;
 }
 
+.Item:hover { /* Top-Menu Item hover 추가 07.31 by.박세용 */
+    background-color: white;
+    color: #303030;
+    cursor: pointer;  
+}
 
 .top-border {
     width: 1200px;

@@ -1,8 +1,15 @@
 /* home 화면 vide 호출 css 작성자 노경민 */
 
-/* 메인화면 틀 */
+/* 메인화면 정렬 */
+.video-preview {
+    display: flex;
+    float: center;
+    padding: 24px;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
 .video-grid {
-    display : flex;
     flex-direction: row;
     /* padding : 3%; */
     color : white;

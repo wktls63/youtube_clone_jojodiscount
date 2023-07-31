@@ -1,26 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>HOME</title>
-        <link rel="stylesheet" href="style/general.css">
-        <link rel="stylesheet" href="style/header.css">
-        <link rel="stylesheet" href="style/aside.css">
-        <link rel="stylesheet" href="style/video.css">
-    </head>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>HOME</title>
-        <link rel="stylesheet" href="style/general.css">
-        <link rel="stylesheet" href="style/header.css">
-        <link rel="stylesheet" href="style/aside.css">
-        <link rel="stylesheet" href="style/video.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+    <link rel="stylesheet" href="style/general.css">
+    <link rel="stylesheet" href="style/header.css">
+    <link rel="stylesheet" href="style/aside.css">
+    <link rel="stylesheet" href="style/video.css">
+</head>
 
-    <body>
     <body>
 
         <header class="header">
@@ -74,42 +64,38 @@
                     <img class="profileimg" src="img/Profile.png">
                 </div>
             </div>
-        </header>
+        </div>
+        <div class="searchbox">
+            <input class="search-bar" type="text" placeholder="Search">
+            <button class="search-button">
+                <img class="search-icon" src="icon/search.png" alt="">
+                <div class="tooltip">Search</div>
+            </button>
+            <button class="voice-search-button">
+                <img class="voice-search-icon" src="icon/mic.png" alt="">
+                <div class="tooltip">Search with your voice</div>
+            </button>
+        </div>
+        <div class="Profile">
+            <div class="ProfileDetail">
+                <img class="imgs" src="img/create.png">
             </div>
-            <div class="searchbox">
-                <input class="search-bar" type="text" placeholder="Search">
-                <button class="search-button">
-                    <img class="search-icon" src="icon/search.png" alt="">
-                    <div class="tooltip">Search</div>
-                </button>
-                <button class="voice-search-button">
-                    <img class="voice-search-icon" src="icon/mic.png" alt="">
-                    <div class="tooltip">Search with your voice</div>
-                </button>
+            <div class="ProfileDetail">
+                <img class="imgs" src="img/apps.png">
             </div>
-            <div class="Profile">
-                <div class="ProfileDetail">
-                    <img class="imgs" src="img/create.png">
-                </div>
-                <div class="ProfileDetail">
-                    <img class="imgs" src="img/apps.png">
-                </div>
-                <div class="ProfileDetail">
-                    <img class="imgs" src="img/notifications.png">
-                </div>
-                <div class="ProfileImg">
-                    <img class="profileimg" src="img/Profile.png">
-                </div>
+            <div class="ProfileDetail">
+                <img class="imgs" src="img/notifications.png">
             </div>
-        </header>
+            <div class="ProfileImg">
+                <img class="profileimg" src="img/Profile.png">
+            </div>
+        </div>
+    </header>
 
-        
-
-        <!-- 헤더를 아래 메인화면 부분 -->
-        <!-- 사이드바 -->
-        <div class="mainpage">
-            
- <aside class="Sidebar">
+    <!-- 헤더를 아래 메인화면 부분 -->
+    <!-- 사이드바 -->
+    <div class="mainpage">
+        <aside class="Sidebar">
             <div class="Top">
                 <button class="Menu">
                     <div class="Menu-Item">
@@ -348,47 +334,40 @@
                 </div>
             </div>
         </aside>
-            
-            <div class="content">
-                <nav class="Top-Menu">
-                    <div class="Item">전체</div>
-                    <div class="Item">음악</div>
-                    <div class="Item">믹스</div>
-                    <div class="Item">실시간</div>
-                    <div class="Item">게임</div>
-                    <div class="Item">뉴스</div>
-                    <div class="Item">뷰티 팁</div>
-                    <div class="Item">랩</div>
-                    <div class="Item">축구</div>
-                    <div class="Item">ASMR</div>
-                    <div class="Item">영화</div>
-                    <div class="Item">최근에 업로드 된 동영상</div>
-                    <div class="Item">감상한 동영상</div>
-                    <div class="Item">새로운 맞춤 동영상</div>
-                    <div class="Icon">
-                        <img class="top-menu-icon" src="svg/leftBottom.svg">
-                    </div>
-                    <!--헤더 부분에도 Icon 있음-->
-                </nav>
-                
-                <div class="main-video">
-                    <section class="video-grid" id="video-grid">
-                        <div class="video-preview" id="video-preview">
-                            <!-- 이곳에 videoRender.js -->
-                        </div>
-                    </section>
-                    </section>
+
+        <div class="content">
+            <nav class="Top-Menu">
+                <div class="Item">전체</div>
+                <div class="Item">음악</div>
+                <div class="Item">믹스</div>
+                <div class="Item">실시간</div>
+                <div class="Item">게임</div>
+                <div class="Item">뉴스</div>
+                <div class="Item">뷰티 팁</div>
+                <div class="Item">랩</div>
+                <div class="Item">축구</div>
+                <div class="Item">ASMR</div>
+                <div class="Item">영화</div>
+                <div class="Item">최근에 업로드 된 동영상</div>
+                <div class="Item">감상한 동영상</div>
+                <div class="Item">새로운 맞춤 동영상</div>
+                <div class="Icon">
+                    <img class="top-menu-icon" src="svg/leftBottom.svg">
                 </div>
+                <!--헤더 부분에도 Icon 있음-->
+            </nav>
+
+            <div class="main-video">
+                <section class="video-grid" id="video-grid">
+                    <div class="video-preview" id="video-preview">
+                        <!-- 이곳에 videoRender.js -->
+                    </div>
+                </section>
             </div>
-
         </div>
-    </body>
-    <script src="js/location.js"></script>
-    <script src="js/videoRender.js"></script>
-
-        </div>
-    </body>
-    <script src="js/location.js"></script>
-    <script src="js/videoRender.js"></script>
+    </div>
+</body>
+<script src="js/location.js"></script>
+<script src="js/videoRender.js"></script>
 
 </html>

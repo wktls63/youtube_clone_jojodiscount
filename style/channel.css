@@ -1,0 +1,230 @@
+.Channel {
+    width: Hug (1200px);
+    height: Hug (286px);
+    top: 395px;
+    left: 240px;
+    padding-top:20px;
+    background-color: #181818;
+    
+
+}
+
+.Channel-cover{
+    display: flex;
+    width: 83vw;
+    height:30vh;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    margin:0;
+    padding:0;
+}
+
+.Channel-Title{
+    display: inline-flex;
+    padding: 20px 65px 4px 65px;
+    align-items: flex-start;
+    gap: 400px;
+    width:100vw;
+    height:120px;
+    background-color: #212121FF;
+
+}
+.Profile{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width:500px;
+    
+    
+}
+.Pic{
+    display: flex;
+    width: 80px;
+    height: 80px;
+    padding-right:30px;
+    justify-content: center;
+    align-items: center;
+}
+.Channel-pro-img{
+    border-radius: 80px;
+    opacity: 0.6499999761581421;
+}
+.info{
+    display:flex;
+    flex-direction: column;
+    width:300px;
+}
+.Name{
+    color: var(--white-color, #FFF);
+    font-family: Roboto;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.subscribers{
+    color: var(--gray-color, #AAA);
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+} 
+
+.Subscribes-Btn {
+    width: Hug (116px);
+    height: Hug (36px);
+    padding: 10px 16px 10px 16px;
+    border-radius: 2px;
+    gap: 10px;
+    cursor: pointer;
+    background-color: #CC0000;
+    margin-top:50px;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+    border: none;
+    color: white;
+}
+
+.Channel-Toolbar {
+    display:flex;
+    width: Hug (1200px);
+    height: Hug (48px);
+    top: 292px;
+    padding: 0px 65px 0px 65px;
+    margin-top:0px;
+    background-color: #181818;
+
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #AAAAAA;
+    border: none; 
+    background-color: #212121FF;
+}
+
+
+.Channel-Toolbar .Menu{
+    display: flex;
+    width:120px;
+    height:30px;
+    margin:0px;
+    justify-content:  center;
+    
+   
+}
+.Search{
+    gap:300px;
+} 
+.Icon{
+    display: flex;
+    width: 24px;
+    height: 24px;
+    padding: 3px 3.13px 3.12px 3px;
+    justify-content: center;
+    align-items: center;
+}
+.Search .Btn{
+
+}
+
+
+
+/* .small-video {
+    width: Hug (1200px);
+    height: Hug (286px);
+    top: 395px;
+    left: 240px;
+    padding: 24px 287px 24px 65px;
+    background-color: black;
+} */
+
+/* .youtube-player {
+    width: Hug (448px);
+    height: Hug (238px);
+    padding: 0px 24px 0px 0px;
+    gap: 10px;
+
+    float: left;
+} */
+
+/* .Title {
+    width: 301px;
+    height: 16px;
+
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    color: white;
+    float: right;
+} */
+
+/* .Time {
+    width: 168px;
+    height: 15px;
+
+    font-family: Roboto;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 15px;
+    letter-spacing: 0em;
+    text-align: left;
+    float: right;
+    color: Gray;
+} */
+
+/* .Descriptions {
+    width: 400px;
+    height: 80px;
+
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    float: right;
+    color: white;
+} */
+
+/* .Play-Lists {
+    width: 1200px;
+    height: 1152px;
+    top: 681px;
+    left: 240px;
+} */
+
+/* .Play-List {
+    width: Hug (1200px);
+    height: Hug (288px);
+    padding: 0px 65px 0px 65px;
+
+    background-color: black;
+} */
+
+.Video-card {
+    width: Fixed (1070px);
+    height: Hug (242px);
+    top: 44px;
+    padding: 24px 0px 24px 0px;
+
+}
+
+.Xsmall-Video {
+    width: Fixed (214px);
+    height: Hug (194px);
+    padding: 0px 4px 0px 0px;
+    float: left;
+
+}

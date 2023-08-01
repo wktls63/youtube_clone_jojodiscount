@@ -1,7 +1,9 @@
 .Primary {
-    display: flex;
-    width: 664px;
-    height: 968px;
+
+    display: inline-block;
+    width: auto;
+    height: auto;
+    margin-left: 75px;
     padding: 24px 0px 0px 24px;
     flex-direction: column;
     justify-content: flex-end;
@@ -26,6 +28,7 @@
     flex-shrink: 0;
 }
 
+
 .Video-Desc {
     display: flex;
     width: 640px;
@@ -35,6 +38,28 @@
     align-items: flex-start;
     flex-shrink: 0;
 }
+
+.Channel-Info {
+    padding-top: 10px;
+    padding-left: 40px;
+    font-size: 14px;
+}
+
+.Btn {
+    padding-top: 10px;
+    padding-left: 30px;
+    font-size: 12px;
+    color: #AAAAAA;
+    font-weight: bold;
+}
+
+.Channel-Title {}
+
+.Channel-Title.marcus {}
+
+.Channel-Title.Name {}
+
+.Channel-Title.Subscription-Btn {}
 
 .Video-Info {
     display: flex;
@@ -72,13 +97,25 @@
 }
 
 .Secondary {
-    display: flex;
-    width: 426px;
+    float: right;
+    display: inline;
+    width: 500px;
     height: 968px;
+    margin-right: 120px;
     flex-direction: column;
     justify-content: flex-end;
-    align-items: center;
+    align-items: left;
     flex-shrink: 0;
+    background: #181818;
+}
+
+.Secondary.Content {
+    margin-top: 0px;
+    align-items: left;
+}
+
+.Top-Menu {
+    margin-top: 0px;
     background: #181818;
 }
 
@@ -86,7 +123,7 @@
     width: 640px;
     height: 1px;
     flex-shrink: 0;
-    border-color:#303030
+    border-color: #303030
 }
 
 .Comment {
@@ -124,10 +161,10 @@
     justify-content: center;
     align-items: center;
     background-color: transparent;
-    
+
 }
 
-.Comment-Content{
+.Comment-Content {
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -141,7 +178,7 @@
     gap: 10px;
 }
 
-.User-Avatar{
+.User-Avatar {
     display: flex;
     width: 40px;
     height: 40px;
@@ -150,7 +187,7 @@
     border-radius: 40px;
 }
 
-.Comment-Area{
+.Comment-Area {
     display: flex;
     width: 584px;
     padding: 7px 0px 8px 0px;
@@ -159,7 +196,7 @@
     gap: 4px;
 }
 
-.Comment-Border{
+.Comment-Border {
     height: 1px;
     align-self: stretch;
     background: var(--border-color, #303030);
@@ -197,12 +234,12 @@
     display: flex;
     gap: 16px;
     align-items: flex-start;
-  }
-  
-  .Comment-Details {
+}
+
+.Comment-Details {
     display: flex;
     flex-direction: column;
-  }
+}
 
 .Comment-Header {
     display: flex;
@@ -264,6 +301,10 @@
     align-items: flex-start;
 }
 
+.like:hover {
+    cursor: pointer;
+}
+
 .liked {
     display: flex;
     width: 16px;
@@ -271,6 +312,10 @@
     padding: 2.667px 1.998px 2px 2px;
     justify-content: center;
     align-items: center;
+}
+
+.liked:hover {
+    cursor: pointer;
 }
 
 .like-text {
@@ -298,4 +343,3 @@
     line-height: 18px;
     text-transform: uppercase;
 }
-

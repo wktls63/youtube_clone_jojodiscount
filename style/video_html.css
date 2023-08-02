@@ -1,0 +1,413 @@
+.Primary {
+
+    display: inline-block;
+    width: auto;
+    height: auto;
+    margin-left: 450px;
+    padding: 24px 0px 0px 24px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    flex-shrink: 0;
+    background: #181818;
+}
+
+.VideoPlayer {
+    display: flex;
+    width: 640px;
+    height: 100px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex-shrink: 0;
+}
+
+.Youtube-player {
+    width: 640px;
+    height: 360px;
+    flex-shrink: 0;
+}
+
+
+.Video-Desc {
+    display: flex;
+    width: 640px;
+    height: 166px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex-shrink: 0;
+}
+
+.Channel-Info {
+    padding-top: 10px;
+    padding-left: 40px;
+    font-size: 14px;
+}
+
+.Btn {
+    padding-top: 10px;
+    padding-left: 30px;
+    font-size: 12px;
+    color: #AAAAAA;
+    font-weight: bold;
+}
+
+.Video-Info {
+    display: flex;
+    width: 640px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.Title {
+    display: flex;
+    padding: 3px 0px 2px 0px;
+    align-items: flex-start;
+    gap: 10px;
+    text-align: left;
+}
+
+.Info {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 91px;
+}
+
+.Info-text {
+    display: flex;
+    padding: 12px 0px;
+    align-items: flex-start;
+    gap: 10px;
+
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+
+}
+
+.Top-Level {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.Secondary {
+    float: right;
+    display: inline;
+    width: 500px;
+    height: 968px;
+    margin-right: 120px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: left;
+    flex-shrink: 0;
+    background: #181818;
+}
+
+.Secondary.Content {
+    margin-top: 0px;
+    align-items: left;
+}
+
+.Top-Menu {
+    margin-top: 0px;
+    background: #181818;
+}
+
+#border {
+    width: 640px;
+    height: 1px;
+    flex-shrink: 0;
+    border-color: #303030
+}
+
+.Comment {
+    display: flex;
+    padding: 24px 0px 32px 0px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.Short-By {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: fit-content;
+}
+
+.Count {
+    display: inline-flex;
+    padding: 1px 32px 1px 0px;
+    align-items: flex-start;
+}
+
+.Short-by {
+    display: inline-flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.Comment-Icon {
+    display: flex;
+    width: 24px;
+    height: 24px;
+    padding: 5px 3px 6px 3px;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+
+}
+
+.Comment-Content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.Profile-pic {
+    display: flex;
+    padding-right: 0px;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.User-Avatar {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+}
+
+.Comment-Area {
+    display: flex;
+    width: 584px;
+    padding: 7px 0px 8px 0px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+}
+
+.Comment-Border {
+    height: 1px;
+    align-self: stretch;
+    background: var(--border-color, #303030);
+}
+
+.Comments {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.Comments .Comment {
+    display: flex;
+    width: 640px;
+    padding-bottom: 0px;
+    align-items: flex-start;
+}
+
+.profile-pic {
+    display: flex;
+    padding-right: 0px;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.Comments .Comment .Comment {
+    display: flex;
+    width: 544px;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-shrink: 0;
+}
+
+.Comment-Content {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.Comment-Details {
+    display: flex;
+    flex-direction: column;
+}
+
+.Comment-Header {
+    display: flex;
+    padding-bottom: 0px;
+    align-items: flex-start;
+    align-self: stretch;
+}
+
+.Comments .Comment .Comment-Header .username {
+    color: var(--white-color, #FFF);
+    font-family: Roboto;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+    margin-right: 8px;
+}
+
+.Comments .Comment .Comment-Header .timestamp {
+    color: var(--gray-color, #AAA);
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.Comments .Comment .Comment-Text {
+    display: flex;
+    padding: 2px 0px;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+}
+
+.Comments .Comment .Comment-Toolbar {
+    display: flex;
+    padding-top: 4px;
+    align-items: flex-start;
+    align-self: stretch;
+}
+
+.Comments .Comment .Comment-Toolbar/button {
+    display: flex;
+    padding: 1px 0px;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.like-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.like {
+    display: flex;
+    padding: 8px;
+    align-items: flex-start;
+}
+
+.like:hover {
+    cursor: pointer;
+}
+
+.liked {
+    display: flex;
+    width: 16px;
+    height: 16px;
+    padding: 2.667px 1.998px 2px 2px;
+    justify-content: center;
+    align-items: center;
+}
+
+.liked:hover {
+    cursor: pointer;
+}
+
+.like-text {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--gray-color, #AAA);
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+.Reply {
+    display: flex;
+    padding: 8px 16px;
+    align-items: flex-start;
+    gap: 5px;
+    color: var(--gray-color, #AAA);
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    text-transform: uppercase;
+}
+
+.Channel-Title {
+    width: 640px;
+    height: 51px;
+}
+
+.Pic {
+    width: 48px;
+    height: 48px;
+    float: left;
+}
+
+.Profile-Name {
+    margin-left: 15px;
+    display: inline-block;
+}
+
+.Name {
+    display: inline-block;
+    width: 100px;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0em;
+}
+
+.Subscribe-People {
+    white-space: nowrap;
+    display: block;
+    width: 93px;
+    height: 14px;
+    font-size: 12px;
+}
+
+.Subscribes-Btn {
+    width: Hug (116px);
+    height: Hug (36px);
+    /* padding: 10px 16px 10px 16px; */
+    margin-left: 358px;
+    border-radius: 2px;
+    /* gap: 10px; */
+    cursor: pointer;
+    background-color: #CC0000;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: right;
+    border: none;
+    color: white;
+}
+
+.Channel-Info {
+    margin-left: 24px;
+}
+
+.Btn {
+    margin-left: 32px;
+    cursor: pointer;
+}
+
+#likeButton,
+#dislikeButton {
+    background-color: transparent;
+}

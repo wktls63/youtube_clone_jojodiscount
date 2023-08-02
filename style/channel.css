@@ -136,7 +136,161 @@
 
 }
 
-
+.Small-Video {
+    display: inline-flex;
+    align-items: flex-start;
+    width: 848px;
+    height: 238px;
+    padding: 24px 287px 24px 65px;
+}
+  
+.Small-Video-Desc {
+    padding-bottom: 0px;
+}
+  
+.Video-Title,
+.Title,
+.Time {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-bottom: 20px;
+}
+  
+.Time {
+    color: var(--gray-color, #aaa);
+    font-family: Roboto;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+  
+.Title {
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.14px;
+    color: white;
+}
+  
+.Descriptions {
+    color: var(--white-color, #fff);
+    font-variant-numeric: stacked-fractions;
+    font-feature-settings: "hlig" on, "dlig" on;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.14px;
+}
+  
+.Player {
+    padding-right: 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+  
+.Player>video {
+    width: 424px;
+    height: 238px;
+}
+  
+.Video-Desc>video {
+    width: 214px;
+}
+  
+.Play-List {
+    color: var(--white-color, #fff);
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    border-top: 1px solid #303030;
+    width: 100%;
+    display: flex;
+    padding-top: 8px;
+    align-items: flex-start;
+}
+  
+.Play-List>p {
+    padding: 9px 8px 8px 0px;
+    align-items: flex-start;
+    gap: 10px;
+}
+  
+.Play-Btn {
+    display: flex;
+    padding: 6px 16px;
+    align-items: flex-start;
+}
+  
+.Play-Btn>p {
+    display: flex;
+    padding: 3px 0px 2px 8px;
+    align-items: flex-start;
+    gap: 10px;
+}
+  
+.Play-Btn>* {
+    color: var(--gray-color, #aaa);
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+}
+  
+.Video-Desc>p {
+    color: var(--white-color, #fff);
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  
+    display: flex;
+    padding: 8px 0px;
+    align-items: flex-start;
+    gap: 10px;
+}
+  
+.Video-Desc-Views {
+    color: var(--gray-color, #aaa);
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+  
+/* content */
+.Content {
+    display: flex;
+    padding: 0px 65px;
+    flex-direction: column;
+    align-items: flex-start;
+}
+  
+.Video-card {
+    display: flex;
+    padding: 24px 0px;
+    align-items: flex-start;
+}
+  
+/* .Xsamll-video {
+    padding-right: 6px;
+    display: flex;
+    width: 214px;
+    flex-direction: column;
+    align-items: flex-start;
+} */
 
 /* .small-video {
     width: Hug (1200px);
@@ -145,18 +299,18 @@
     left: 240px;
     padding: 24px 287px 24px 65px;
     background-color: black;
-} */
+}
 
-/* .youtube-player {
+.youtube-player {
     width: Hug (448px);
     height: Hug (238px);
     padding: 0px 24px 0px 0px;
     gap: 10px;
 
     float: left;
-} */
+}
 
-/* .Title {
+.Title {
     width: 301px;
     height: 16px;
 
@@ -168,9 +322,9 @@
     text-align: left;
     color: white;
     float: right;
-} */
+}
 
-/* .Time {
+.Time {
     width: 168px;
     height: 15px;
 
@@ -182,9 +336,9 @@
     text-align: left;
     float: right;
     color: Gray;
-} */
+}
 
-/* .Descriptions {
+.Descriptions {
     width: 400px;
     height: 80px;
 
@@ -196,22 +350,22 @@
     text-align: left;
     float: right;
     color: white;
-} */
+}
 
-/* .Play-Lists {
+.Play-Lists {
     width: 1200px;
     height: 1152px;
     top: 681px;
     left: 240px;
-} */
+}
 
-/* .Play-List {
+.Play-List {
     width: Hug (1200px);
     height: Hug (288px);
     padding: 0px 65px 0px 65px;
 
     background-color: black;
-} */
+}
 
 .Video-card {
     width: Fixed (1070px);
@@ -227,4 +381,4 @@
     padding: 0px 4px 0px 0px;
     float: left;
 
-}
+} */

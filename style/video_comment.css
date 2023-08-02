@@ -2,12 +2,13 @@
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
-    font-family: Arial, sans-serif;
+    font-family: Roboto, Arial;
 }
 
 #comment-input {
-
-    width: 70%;
+    color: white;
+    background-color: #181818;
+    width: 500px;
     padding: 8px;
     margin-bottom: 8px;
 }

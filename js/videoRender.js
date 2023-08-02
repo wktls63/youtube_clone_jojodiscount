@@ -31,9 +31,9 @@ async function getVideoInfo(videoId) {
   return data;
 }
 
+
 // 검색 기능을 지원하도록 업데이트된 displayVideoList() 함수
 async function displayVideoList(searchQuery = '') {
-    try {
       const videoListContainer = document.getElementById('video-preview');
       let videoListHtml = ''; // 비디오 정보를 누적할 빈 문자열
   
@@ -88,15 +88,8 @@ async function displayVideoList(searchQuery = '') {
   
       // videoListHtml을 videoListContainer의 내부 콘텐츠로 설정
       videoListContainer.innerHTML = videoListHtml;
-    } catch (error) {
-      console.error('에러:', error);
-    }
   }
   
-  // HTML 파싱된 후 displayVideoList() 함수를 실행하는 DOMContentLoaded 이벤트 핸들러를 등록
-  document.addEventListener('DOMContentLoaded', () => {
-    displayVideoList(); // 처음에는 모든 비디오를 표시
-  });
   
 // 검색 버튼 클릭 이벤트 핸들러를 등록
 document.getElementById('search-button').addEventListener('click', () => {
@@ -112,44 +105,6 @@ document.getElementById('search-button').addEventListener('click', () => {
     }
   });
 
-// channel.html 에 video list 불러오는 함수
-async function channelVideoRender() {
-  try {
-
-    // 변수
-    const videoListContainer = document.getElementById('Video-card')
-    let xsamllHTML = "";
-
-    for (let videoId = 0; videoId <= 20; videoId++) {
-      const videoInfo = await getVideoInfo(videoId);
-
-      // 조회수 변환 함수
-      const formattedViews = formatViews(videoInfo.views);
-
-      // 비디오 url
-      let videoURL = `location.href="./video.html?id=${videoId}"`;
-
-      const videoItemHtml = `
-          <div>
-            <img src='${videoInfo.image_link}' style='width:320px;cursor:pointer;' onclick='${videoURL}'></img>
-            <div>
-              <p>${videoInfo.video_title}</p>
-              <p>Channel: ${videoInfo.video_channel}</p>
-              <p>조회수: ${formattedViews} 회 &#183; ${videoInfo.upload_date}</p>
-            </div>
-          </div>
-        `;
-      xsamllHTML += videoItemHtml;
-    }
-    // xsamllHTML을 videoListContainer의 내부 콘텐츠로 설정
-    videoListContainer.innerHTML = xsamllHTML;
-  } catch (error) {
-    console.error('에러:', error);
-  }
-}
-
-// HTML 파싱된 후 렌더 함수 실행
-document.addEventListener('DOMContentLoaded', channelVideoRender);
 
 // 등록 후 경과 된 시간 노출
 const TIME_ZONE = 3240 * 10000;

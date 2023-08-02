@@ -79,6 +79,7 @@
 
 .Menu:hover {
     background-color: rgb(53, 53, 53);
+    cursor: pointer;
 }
 
 
@@ -98,7 +99,7 @@
 }
 
 .Icon_a {
-    margin-left: 10px;
+    margin-left: 0px;
 }
 
 .Title {

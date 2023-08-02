@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="style/header.css">
     <link rel="stylesheet" href="style/aside.css">
     <link rel="stylesheet" href="style/channel.css">
+    <link rel="stylesheet" href="style/video.css">
 </head>
 
 <body>
@@ -308,7 +309,10 @@
                         <div class="subscribers">1.2M</div>
                     </div>
                 </div>
-                <button class="Subscribes-Btn">SUBSCRIBES</button>
+                <button id ="Subscribes-Btn" class="Subscribes-Btn" 
+                onclick="toggleSubscription()" 
+                onclick ="handleClick()">SUBSCRIBES
+                </button>
             </div>
             <div class="Channel-Toolbar">
 
@@ -327,57 +331,91 @@
                     </button>
                 </div>
             </div>
+
+            <main>
+                <article class="Small-Video" id="Small-Video">
+                    <!-- <div class="Player">
+                        <video src="https://storage.googleapis.com/oreumi.appspot.com/video_15.mp4" controls></video>
+                        <div class="Youtube-player"></div>
+                    </div>
+                    <div class="Smaill-Video-Desc">
+                        <div class="Video-Title">
+                            <div class="Title">자연 속에서 만나는 행복한 모습</div>
+                            <div class="Time">495,288 views . 3 weeks ago</div>
+                        </div>
+                        <div class="Descriptions">
+                            <p>자연 속에서 만나는 행복한 모습, 자연 속에서 만나는 행복한 모습
+                                자연 속에서 만나는 행복한 모습, 자연 속에서 만나는 행복한 모습
+                                자연 속에서 만나는 행복한 모습, 자연 속에서 만나는 행복한 모습
+                                자연 속에서 만나는 행복한 모습, 자연 속에서 만나는 행복한 모습
+                                자연 속에서 만나는 행복한 모습
+                            </p>
+                        </div>
+                    </div> -->
+                </article>
+
+                <article class="Play-Lists">
+                    <div class="Play-List">
+                        <div class="Content">
+                            <div class="Play-list">
+                                <p>Search On '21</p>
+                                <div class="Title"></div>
+                                <div class="Play-Btn">
+                                    <div class="Sidebar-Icons/play"></div>
+                                    <div class="Play-All"></div>
+                                </div>
+                            </div>
+                            <div class="Video-card" id="Video-card">       
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="Play-List">
+                        <div class="Content">
+                            <div class="Play-list">
+                                <p>Search On '21</p>
+                                <div class="Title"></div>
+                                <div class="Play-Btn">
+                                    <div class="Sidebar-Icons/play"></div>
+                                    <div class="Play-All"></div>
+                                </div>
+                            </div>
+                            <div class="Video-card" id="Video-card-two">       
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="Play-List">
+                        <div class="Content">
+                            <div class="Play-list">
+                                <p>Search On '21</p>
+                                <div class="Title"></div>
+                                <div class="Play-Btn">
+                                    <div class="Sidebar-Icons/play"></div>
+                                    <div class="Play-All"></div>
+                                </div>
+                            </div>
+                            <div class="Video-card" id="Video-card-three">       
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Play-List"></div>
+                </article>
+            </main>
         </nav>
 
-        <main>
-            <article class="Small-Video">
-                <div class="Player">
-                    <div class="Youtube-player"></div>
-                </div>
-                <div class="Video/Desc">
-                    <div class="Video-Title">
-                        <div class="Title"></div>
-                        <div class="Time"></div>
-                    </div>
-                    <div class="Descriptions"></div>
-                </div>
-            </article>
-            <article class="Play-Lists">
-                <div class="Play-List">
-                    <div class="Content">
-                        <div class="Play-list">
-                            <div class="Title"></div>
-                            <div class="Play-Btn">
-                                <div class="Sidebar-Icons/play"></div>
-                                <div class="Play-All"></div>
-                            </div>
-                        </div>
-                        <div class="Video-card" id="Video-card">
-                            <div class="Xsmall-Video" id="Xsmall-Video">
-                                <div class="Thumbnail/Images">
-                                    <div class="VideoTime"></div>
-                                    <div class="Thumbnail-Images"></div>
-                                </div>
-                                <div class="Video-Desc">
-                                    <div class="Views">
-                                        <div class="Channel-Views"></div>
-                                        <div class="Channel-Name"></div>
-                                    </div>
-                                    <div class="Title"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="Play-List"></div>
-                <div class="Play-List"></div>
-                <div class="Play-List"></div>
-            </article>
-        </main>
 
     </div>
 </body>
 <script src="js/location.js"></script>
-<script src="js/videoRender.js"></script>
-
+<script src="js/channelVideoRender.js"></script>
+<script src="js/subscription.js"></script>
+<script>
+    // HTML 파싱된 후 channelVideoRender() 함수를 실행하는 DOMContentLoaded 이벤트 핸들러를 등록
+    document.addEventListener('DOMContentLoaded', () => {
+        channelVideoRender().catch(error => {
+            console.error('에러:', error);
+        })
+    });
+</script>
 </html>

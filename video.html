@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Video</title>
     <link rel="stylesheet" href="style/header.css">
-    <link rel="stylesheet" href="style/aside.css">
     <link rel="stylesheet" href="style/general.css">
     <link rel="stylesheet" href="style/video_html.css">
     <link rel="stylesheet" href="style/video_comment.css">
@@ -55,194 +54,211 @@
 
     <!-- 영상 정보와 오른쪽 사이드 바 -->
 
-      <main class="Primary">
+    <main class="Primary">
 
-          <div class="VideoPlayer">
-              <div class="Youtube Player"></div>
-              <div class="Video-Info">
-                  <div class="Video-Info">
-                      <div class="Title">Blind Woodturner: Turning passion into fine art</div>
-                      <div class="Info">
-                          <div class="Info-text"></div>
-                          <div class="Top-Level">
-                              <div class="like">
-                                <img class="liked" src="icon/liked.png" alt="">
-                                <div class="Button-text">1.7 K</div>
-                              </div>
-                              <div class="like">
-                                <img class="liked" src="icon/disliked.png" alt="">
-                                <div class="Button-text">632</div>
-                              </div>
+        <div class="VideoPlayer">
+            <div class="Youtube Player"></div>
+            <div class="Video-Info">
+                <div class="Video-Info">
+                    <div class="Title">Blind Woodturner: Turning passion into fine art</div>
+                    <div class="Info">
+                        <div class="Info-text"></div>
+                        <div class="Top-Level">
+                            <!--좋아요 버튼-->
                             <div class="like">
-                              <img class="liked" src="icon/share.png" alt="">
-                              <div class="Button-text">SHARE</div>
+                                <button id="likeButton" class="liked" onclick="toggleLike()">
+                                    <img class="liked" src="icon/liked.png" alt="">
+                                </button>
+                                <div id="likeCount" , class="Button-text">17</div>
+                            </div>
+                            <!-- 싫어요 버튼-->
+                            <div class="like">
+                                <button id="dislikeButton" class="liked" onclick="toggleDislike()">
+                                    <img class="liked" src="icon/disliked.png" alt="">
+                                </button>
+                                <div id="dislikeCount" ,class="Button-text">632</div>
                             </div>
                             <div class="like">
-                              <img class="liked" src="icon/save.png" alt="">
-                              <div class="Button-text">SAVE</div>
+                                <img class="liked" src="icon/share.png" alt="">
+                                <div class="Button-text">SHARE</div>
                             </div>
                             <div class="like">
-                              <img class="liked" src="icon/more.png" alt="">
-                              <div class="Button-text"> </div>
+                                <img class="liked" src="icon/save.png" alt="">
+                                <div class="Button-text">SAVE</div>
                             </div>
-                          </div>
-                      </div>
-                  </div>
-                  <hr id="border">
-              </div>
-          </div>
-          <div class="Video-Desc">
-              <div class="Video-Desc">
-                <div class="Channel-Title">
-                  <img class="marcus" src="icon/marcus.png" alt="">
-                  <div class="Name">Marcus Levin</div>
-                  <button class="Subscribes-Btn">SUBSCRIBES</button>
+                            <div class="like">
+                                <img class="liked" src="icon/more.png" alt="">
+                                <div class="Button-text"> </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="Channel-Info">Chris Fisher, also known as the Blind Woodturner, learned his craft by listening to
-                  hundreds of hoursof YouTube videos and experimenting in his workshop. Now he`s a YouTube creator himself, sells
-                  his products worldwide, and does demonstrations all around the country.</div>
+                <hr id="border">
+            </div>
+        </div>
+        <div class="Video-Desc">
+            <div class="Video-Desc">
+                <div class="Channel-Title">
+                    <img class="Pic" src="icon/marcus.png" alt="">
+                    <div class="Profile-Name">
+                        <div class="Name">Marcus Levin</div>
+                        <div class="Subscribe-People">1.2M subscribers</div>
+                    </div>
+                    <button id="Subscribes-Btn" class="Subscribes-Btn" onclick="toggleSubscription()"
+                        onclick="handleClick()">SUBSCRIBES
+                    </button>
+                </div>
+                <div class="Channel-Info">
+                    Chris Fisher, also known as the Blind Woodturner, learned his craft by listening to
+                    hundreds of hoursof YouTube videos and experimenting in his workshop. Now he`s a YouTube creator
+                    himself, sells
+                    his products worldwide, and does demonstrations all around the country.
+                </div>
                 <div class="Btn">SHOW MORE</div>
                 <hr id="border">
-              </div>
-          </div>
+            </div>
+        </div>
 
-          <!-- 코멘트 -->
-          <div class="Comment">
+        <!-- 코멘트 -->
+        <div class="Comment">
             <div class="Short-By">
-              <div class="Count">286 Comments</div>
+                <div class="Count">286 Comments</div>
                 <div class="Comment-Icon">
-                  <img src="svg/Dropdown.svg" alt="정렬">
+                    <img src="svg/Dropdown.svg" alt="정렬">
                 </div>
-              <div class="Short-by">SORT BY</div>
+                <div class="Short-by">SORT BY</div>
             </div>
 
             <div class="Comment-Content">
-              <div class="Profile-pic"></div>
-              <div class="User-Avatar">
-                <img src="img/Profile.png" alt="comment-user-avatar">
-              </div>
-              <div class="Comment-Area">Add a public comment...
-                <div class="Comment-Border"></div>
-              </div>
-            </div>
-          </div>
-            
-          <div class="Comments">
-            <div class="Comment">
-              <div class="profile-pic"></div>
-              <div class="Comment-Content">
+                <div class="Profile-pic"></div>
                 <div class="User-Avatar">
-                  <img src="icon/james.png" alt="comment-user-avatar">
+                    <img src="img/Profile.png" alt="comment-user-avatar">
                 </div>
-
-                <div class="Comment-Details">
-                  <div class="Comment-Header">
-                    <span class="username">James Gouse</span>
-                    <span class="timestamp">8 hours ago</span>
-                  </div>
-                  <div class="Comment-Text">Wow, world is full of different skills</div>
-                  <div class="Comment-Toolbar">
-                    <div class="button">
-                      <div class="like-container">
-                        <div class="like">
-                          <div class="liked">
-                            <img src="svg/Liked.svg" alt="댓글 좋아요">
-                          </div>
-                        </div>
-                        <div class="like-text">77</div>
-                      </div>
-                    </div>
-                        
-                    <div class="button">
-                      <div class="like">
-                        <div class="liked">
-                            <img src="svg/DisLiked.svg" alt="댓글 싫어요 ">
-                        </div>
-                      </div>
-                    </div>
-                      <div class="Reply">REPLY</div>
-                  </div>
+                <div class="comments-container">
+                    <form id="comment-form">
+                        <input type="text" id="comment-input" placeholder="Add a public comment..."
+                            onkeypress="handleKeyPress(event)" autocomplete="off">
+                    </form>
+                    <ul id="comments-list"></ul>
                 </div>
-              </div>
             </div>
-          </div>
 
-          <div class="Comments">
-            <div class="Comment">
-              <div class="profile-pic"></div>
-              <div class="Comment-Content">
-                <div class="User-Avatar">
-                  <img src="icon/alan.png" alt="comment-user-avatar">
-                </div>
-                <div class="Comment-Details">
-                  <div class="Comment-Header">
-                    <span class="username">Alan Cooper</span>
-                    <span class="timestamp">4 days ago</span>
-                  </div>
-                  <div class="Comment-Text">Can you provide? On January 2, 2022</div>
-                  <div class="Comment-Toolbar">
-                    <div class="button">
-                      <div class="like-container">
-                        <div class="like">
-                          <div class="liked">
-                            <img src="svg/Liked.svg" alt="댓글 좋아요">
-                          </div>
+            <div class="Comments">
+                <div class="Comment">
+                    <div class="profile-pic"></div>
+                    <div class="Comment-Content">
+                        <div class="User-Avatar">
+                            <img src="icon/james.png" alt="comment-user-avatar">
                         </div>
-                        <div class="like-text">53</div>
-                      </div>
-                    </div>
-                    <div class="button">
-                      <div class="like">
-                        <div class="liked">
-                          <img src="svg/DisLiked.svg" alt="댓글 싫어요 ">
+
+                        <div class="Comment-Details">
+                            <div class="Comment-Header">
+                                <span class="username">James Gouse</span>
+                                <span class="timestamp">8 hours ago</span>
+                            </div>
+                            <div class="Comment-Text">Wow, world is full of different skills</div>
+                            <div class="Comment-Toolbar">
+                                <div class="button">
+                                    <div class="like-container">
+                                        <div class="like">
+                                            <div class="liked">
+                                                <img src="svg/Liked.svg" alt="댓글 좋아요">
+                                            </div>
+                                        </div>
+                                        <div class="like-text">77</div>
+                                    </div>
+                                </div>
+
+                                <div class="button">
+                                    <div class="like">
+                                        <div class="liked">
+                                            <img src="svg/DisLiked.svg" alt="댓글 싫어요 ">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="Reply">REPLY</div>
+                            </div>
                         </div>
-                      </div>
                     </div>
-                      <div class="Reply">REPLY</div>
-                  </div>
                 </div>
-              </div>
             </div>
-          </div>
 
-      </main>
+            <div class="Comments">
+                <div class="Comment">
+                    <div class="profile-pic"></div>
+                    <div class="Comment-Content">
+                        <div class="User-Avatar">
+                            <img src="icon/alan.png" alt="comment-user-avatar">
+                        </div>
+                        <div class="Comment-Details">
+                            <div class="Comment-Header">
+                                <span class="username">Alan Cooper</span>
+                                <span class="timestamp">4 days ago</span>
+                            </div>
+                            <div class="Comment-Text">Can you provide? On January 2, 2022</div>
+                            <div class="Comment-Toolbar">
+                                <div class="button">
+                                    <div class="like-container">
+                                        <div class="like">
+                                            <div class="liked">
+                                                <img src="svg/Liked.svg" alt="댓글 좋아요">
+                                            </div>
+                                        </div>
+                                        <div class="like-text">53</div>
+                                    </div>
+                                </div>
+                                <div class="button">
+                                    <div class="like">
+                                        <div class="liked">
+                                            <img src="svg/DisLiked.svg" alt="댓글 싫어요 ">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="Reply">REPLY</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </main>
 
 
-      <!-- 사이드 영상 목록 -->
-      <aside class="Secondary">
+    <!-- 사이드 영상 목록 -->
+    <aside class="Secondary">
 
-          <div class="Content">
+        <div class="Content">
 
-              <div class="Top-Menu">
-                  <div class="Item">
-                      <div class="Button">All</div>
-                  </div>
-                  <div class="Item">
-                      <div class="Button">From Marcus Levin</div>
-                  </div>
-              </div>
+            <div class="Top-Menu">
+                <div class="Item">
+                    <div class="Button">All</div>
+                </div>
+                <div class="Item">
+                    <div class="Button">From Marcus Levin</div>
+                </div>
+            </div>
 
-              <!-- video.html 좌측 영상 목록 세부 태그 -->
-              <div class="Videos">
-                  <div class="Video">
-                      <div class="Thumbnail">
-                          <div class="Images">
-                              <div class="VideoTime"></div>
-                              <div class="Thumbnail-Images"></div>
-                          </div>
-                      </div>
-                      <div class="Video-Text">
-                          <div class="Channel-Desc">
-                              <div class="Channel-name"></div>
-                              <div class="Channel-view"></div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
+            <!-- video.html 우측 영상 목록 세부 태그 -->
+            <div class="Videos">
+                <div class="Video">
+                    <div class="Thumbnail">
+                        <div class="Images">
+                            <div class="VideoTime"></div>
+                            <div class="Thumbnail-Images"></div>
+                        </div>
+                    </div>
+                    <div class="Video-Text">
+                        <div class="Channel-Desc">
+                            <div class="Channel-name"></div>
+                            <div class="Channel-view"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-          </div>
+        </div>
 
-      </aside>
+    </aside>
 
 
 </body>

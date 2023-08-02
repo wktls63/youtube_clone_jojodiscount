@@ -343,5 +343,13 @@
 </body>
 <script src="js/location.js"></script>
 <script src="js/videoRender.js"></script>
+<script>
+    // 파싱된 후 displayVideoList() 함수를 실행하는 DOMContentLoaded 이벤트 핸들러를 등록
+    document.addEventListener('DOMContentLoaded', () => {
+        displayVideoList().catch(error => {
+            console.log('에러:', error);
+        }) // 처음에는 모든 비디오를 표시
+    });
+</script>
 
 </html>

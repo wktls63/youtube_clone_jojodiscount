@@ -69,5 +69,13 @@ function saveComments() {
     localStorage.setItem('comments', JSON.stringify(comments));
 }
 
+// 엔터 키 이벤트 처리 함수
+function handleKeyPress(event) {
+    if (event.key === 'Enter') {
+        event.preventDefault();
+        addComment();
+    }
+}
+
 // 페이지 로드 시 댓글 목록 렌더링
 renderComments();

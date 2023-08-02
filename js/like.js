@@ -1,24 +1,7 @@
-// 구독버튼 누를 경우 구독중, 구독중에서 버튼 누를경우 구독취소
-let isSubscribed = false;
-
-function toggleSubscription() {
-    isSubscribed = !isSubscribed;
-    const subscribeBtn = document.getElementById("subscribeBtn");
-
-    if (isSubscribed) {
-        subscribeBtn.textContent = "SUBSCRIBING";
-        subscribeBtn.style.backgroundColor = '#4d4d4d';
-    } else {
-        subscribeBtn.textContent = "SUBSCRIBES";
-        subscribeBtn.style.backgroundColor='red';
-
-    }
-}
-
 let isLiked = false;     
 let isDisliked = false;  
-let likeCount = 0;      
-let dislikeCount = 0;   
+let likeCount = parseInt(document.getElementById("likeCount").textContent, 10);
+let dislikeCount = parseInt(document.getElementById("dislikeCount").textContent, 10); 
 
 // 좋아요 status 관리
 function toggleLike() {

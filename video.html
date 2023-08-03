@@ -245,7 +245,7 @@
             </div>
 
             <!-- video.html 우측 영상 목록 세부 태그 -->
-            <div class="Videos">
+            <div class="Videos" id="Videos">
                 <div class="Video">
                     <div class="Thumbnail">
                         <div class="Images">
@@ -291,5 +291,9 @@
 
 </html>
 
-
+      videoPlyerRender(id).catch(error => {
+          console.error('에러:', error);
+        })
+    });
+</script>
 </html>

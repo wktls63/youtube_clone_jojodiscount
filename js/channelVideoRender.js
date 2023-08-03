@@ -22,6 +22,14 @@ async function getChannelVideoList() {
     return data;
 }
 
+// 채널 비디오 가져오는 함수
+async function getChannelVideo() {
+    const apiUrl = `http://oreumi.appspot.com/channel/getChannelVideo?video_channel=oreumi`;
+    const response = await fetch(apiUrl);
+    const data = await response.json();
+    return data;
+}
+
 
 // 비디오 정보를 가져오는 함수
 async function getVideoInfo(videoId) {
@@ -115,7 +123,7 @@ async function channelVideoRender() {
             `;
             xsamllHTMLThree += videoItemHtmlThree
         }
-        }
+    }
     // xsamllHTML을 videoListContainer의 내부 콘텐츠로 설정
     smallVideoList.innerHTML = smallHTML;
     videoListContainer.innerHTML = xsamllHTML;

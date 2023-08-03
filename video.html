@@ -58,7 +58,9 @@
       <main class="Primary">
 
           <div class="VideoPlayer">
-              <div class="Youtube Player"></div>
+              <div class="Youtube-Player" id="Youtube-Player">
+                <!-- 여기에 비디오 플레이어 렌더 -->
+              </div>
               <div class="Video-Info">
                   <div class="Video-Info">
                       <div class="Title">Blind Woodturner: Turning passion into fine art</div>
@@ -223,7 +225,7 @@
               </div>
 
               <!-- video.html 좌측 영상 목록 세부 태그 -->
-              <div class="Videos">
+              <div class="Videos" id="Videos">
                   <div class="Video">
                       <div class="Thumbnail">
                           <div class="Images">
@@ -248,6 +250,21 @@
 </body>
 <script src="js/location.js"></script>
 <script src="js/video_comment.js"></script>
+<script src="js/videoHtmlVideoRender.js"></script>
+<script>
+  // HTML 파싱된 후 videoPlyerRender() 함수를 실행하는 DOMContentLoaded 이벤트 핸들러를 등록
+  document.addEventListener('DOMContentLoaded', () => {
+    let url = window.location.search;
+    console.log(url)
+    let regex = /[^0-9]/g;
+    let result = url.replace(regex, "")
+    let id = parseInt(result);
+
+      videoPlyerRender(id).catch(error => {
+          console.error('에러:', error);
+        })
+    });
+</script>
 
 
 </html>

@@ -1,14 +1,15 @@
 .Sidebar {
-    position: relative;
+    position: sticky;
     color: white;
     width: 250px;
-    height: auto;
+    height: 1400px;
     background: #212121FF;
     margin-top: 0px;
     margin-left: 0px;
     display: flex;
     flex-direction: column;
     padding-top: 50px;
+    top:0px;
 }
 
 .Top {
@@ -64,8 +65,8 @@
     padding-top: 10px;
     padding-bottom: 5px;
     margin-top: 5px;
-    margin-left: 10px;
-
+    /* margin-left: 10px; */
+    
     width: 210px;
     height: 40px;
     border: 0px;

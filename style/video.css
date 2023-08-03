@@ -59,3 +59,7 @@
     font-size: 12px;
     color: #AAAAAA;
 }
+
+#likeButton, #dislikeButton{
+    background-color: transparent;
+}

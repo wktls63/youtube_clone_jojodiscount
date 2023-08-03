@@ -3,7 +3,7 @@
     display: inline-block;
     width: auto;
     height: auto;
-    margin-left: 75px;
+    margin-left: 450px;
     padding: 24px 0px 0px 24px;
     flex-direction: column;
     justify-content: flex-end;
@@ -15,7 +15,7 @@
 .VideoPlayer {
     display: flex;
     width: 640px;
-    height: 455px;
+    height: 100px;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
@@ -53,14 +53,6 @@
     font-weight: bold;
 }
 
-.Channel-Title {}
-
-.Channel-Title.marcus {}
-
-.Channel-Title.Name {}
-
-.Channel-Title.Subscription-Btn {}
-
 .Video-Info {
     display: flex;
     width: 640px;
@@ -74,6 +66,7 @@
     padding: 3px 0px 2px 0px;
     align-items: flex-start;
     gap: 10px;
+    text-align: left;
 }
 
 .Info {
@@ -88,6 +81,14 @@
     padding: 12px 0px;
     align-items: flex-start;
     gap: 10px;
+
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+
 }
 
 .Top-Level {
@@ -342,4 +343,71 @@
     font-weight: 400;
     line-height: 18px;
     text-transform: uppercase;
+}
+
+.Channel-Title {
+    width: 640px;
+    height: 51px;
+}
+
+.Pic {
+    width: 48px;
+    height: 48px;
+    float: left;
+}
+
+.Profile-Name {
+    margin-left: 15px;
+    display: inline-block;
+}
+
+.Name {
+    display: inline-block;
+    width: 100px;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0em;
+}
+
+.Subscribe-People {
+    white-space: nowrap;
+    display: block;
+    width: 93px;
+    height: 14px;
+    font-size: 12px;
+}
+
+.Subscribes-Btn {
+    width: Hug (116px);
+    height: Hug (36px);
+    /* padding: 10px 16px 10px 16px; */
+    margin-left: 358px;
+    border-radius: 2px;
+    /* gap: 10px; */
+    cursor: pointer;
+    background-color: #CC0000;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: right;
+    border: none;
+    color: white;
+}
+
+.Channel-Info {
+    margin-left: 24px;
+}
+
+.Btn {
+    margin-left: 32px;
+    cursor: pointer;
+}
+
+#likeButton,
+#dislikeButton {
+    background-color: transparent;
 }

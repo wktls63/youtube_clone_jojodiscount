@@ -24,20 +24,20 @@
     display: inline-flex;
     padding: 20px 65px 4px 65px;
     align-items: flex-start;
-    gap: 400px;
+    gap: 600px;
     width:100vw;
     height:120px;
     background-color: #212121FF;
 
 }
-.Profile{
+/* .Profile{
     display: flex;
     justify-content: center;
     align-items: flex-start;
     width:500px;
     
     
-}
+} */
 .Pic{
     display: flex;
     width: 80px;
@@ -125,15 +125,18 @@
     gap:300px;
 } 
 .Icon{
+    
     display: flex;
     width: 24px;
     height: 24px;
-    padding: 3px 3.13px 3.12px 3px;
+    /* padding: 3px 3.13px 3.12px 3px; */
     justify-content: center;
     align-items: center;
+    background-color: transparent;
+    
 }
 .Search .Btn{
-
+    background-color: transparent;
 }
 
 .Small-Video {
@@ -166,7 +169,7 @@
     line-height: normal;
 }
   
-.Title {
+ /* .Title {
     font-family: Roboto;
     font-size: 14px;
     font-style: normal;
@@ -175,7 +178,7 @@
     letter-spacing: 0.14px;
     color: white;
 }
-  
+   */
 .Descriptions {
     color: var(--white-color, #fff);
     font-variant-numeric: stacked-fractions;

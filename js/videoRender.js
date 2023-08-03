@@ -1,10 +1,10 @@
 // home.html 에서 영상들 뿌려주는 작업 07.27 by. 박세용 // channel.html 영상 렌더 작업 07.31 노경민
 // 검색 기능 작업 08.01 by. 박세용
-
 // 숫자를 "454,4819" 형식으로 변환하는 함수
+
 function formatViews(views) {
-    return views.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  }
+  return views.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
 
 
 // 비디오 리스트를 가져오는 함수
@@ -15,6 +15,15 @@ async function getVideoList() {
 }
 
 // 채널 정보를 가져오는 함수
+async function getChannelVideoList() {
+  const response = await fetch('http://oreumi.appspot.com/channel/getChannelVideo?video_channel=oreumi', {
+      method: 'POST'
+  });
+  const data = await response.json();
+  return data;
+}
+
+// 채널 비디오 가져오기
 async function getChannelVideo() {
   const apiUrl = `http://oreumi.appspot.com/channel/getChannelVideo?video_channel=oreumi`;
   const response = await fetch(apiUrl);
@@ -46,11 +55,13 @@ async function displayVideoList(searchQuery = '') {
         videoInfoPromises.push(getVideoInfo(videoId));
       }
       const videoInfoList = await Promise.all(videoInfoPromises);
-  
+      
+      
       for (const videoInfo of videoInfoList) {
         // 비디오 제목과 채널 이름을 소문자로 변환
         const lowerCaseVideoTitle = videoInfo.video_title.toLowerCase();
         const lowerCaseVideoChannel = videoInfo.video_channel.toLowerCase();
+        
   
         // 대소문자를 구분하지 않고 검색을 하기 위해 소문자로 변환한 값을 비교
         if (searchQuery && !(lowerCaseVideoTitle.includes(lowerCaseSearchQuery) || lowerCaseVideoChannel.includes(lowerCaseSearchQuery))) {
@@ -58,7 +69,7 @@ async function displayVideoList(searchQuery = '') {
         }
   
         // 비디오 화면 URL
-        let videoURL = `location.href="./video.html?id=${videoInfo.videoId}"`;
+        let videoURL = `location.href="./video.html?id=${videoInfo.video_id}"`;
   
         // 조회수를 포맷하여 "45,4819" 형식으로 변환
         const formattedViews = formatViews(videoInfo.views);

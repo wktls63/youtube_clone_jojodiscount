@@ -346,6 +346,8 @@
 <script>
     // HTML 파싱된 후 displayVideoList() 함수를 실행하는 DOMContentLoaded 이벤트 핸들러를 등록
     document.addEventListener('DOMContentLoaded', () => {
+        let url = window.location.search;
+
         displayVideoList().catch(error => {
             console.error('에러:', error);
         }) // 처음에는 모든 비디오를 표시

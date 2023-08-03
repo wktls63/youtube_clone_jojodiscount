@@ -15,12 +15,21 @@
     flex-direction: row;
     /* padding : 3%; */
     color: white;
+    width:3
+    
 }
 
+.video-grid-box{
+  margin-top:10px;
+  margin-bottom:10px;
+  margin-left:30px;
+  margin-right:20px;
+}
 /* 썸네일 */
 .thumbnail-row {
     margin-bottom: 8px;
     position: relative;
+    
 }
 
 .thumbnail {
@@ -58,4 +67,8 @@
 .video-stats {
     font-size: 12px;
     color: #AAAAAA;
+}
+
+#likeButton, #dislikeButton{
+    background-color: transparent;
 }

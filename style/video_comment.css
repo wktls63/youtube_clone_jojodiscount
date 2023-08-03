@@ -38,3 +38,75 @@ button {
 .editing {
     background-color: #f0f0f0;
 }
+
+.comment-add {
+    height: 34px;
+    width: 58px;
+    padding: 0%;
+    float: right;
+    background-color: white;
+    color: black;
+    margin-left: 10px;
+    border-radius: 20px;
+    font-family: Roboto;
+    text-align: center;
+}
+
+.comment-add:hover {
+    background-color: gray;
+    color: black;
+}
+
+.comment-cancle {
+    height: 34px;
+    width: 58px;
+    padding: 0%;
+    float: right;
+    background-color: white;
+    color: black;
+    margin-left: 10px;
+    border-radius: 20px;
+    font-family: Roboto;
+    text-align: center;
+}
+
+.comment-cancle:hover {
+    background-color: gray;
+    color: black;
+}
+
+.comment-delete {
+    height: 34px;
+    width: 58px;
+    padding: 0%;
+    float: right;
+    background-color: white;
+    color: black;
+    margin-left: 10px;
+    border-radius: 20px;
+    font-family: Roboto;
+    text-align: center;
+}
+
+.comment-delete:hover {
+    background-color: gray;
+    color: black;
+}
+
+.comment-change {
+    height: 34px;
+    width: 58px;
+    padding: 0%;
+    float: right;
+    background-color: white;
+    color: black;
+    margin-left: 10px;
+    border-radius: 20px;
+    font-family: Roboto;
+    text-align: center;
+}
+
+.comment-change:hover {
+    background-color: gray;
+    color: black;
+}

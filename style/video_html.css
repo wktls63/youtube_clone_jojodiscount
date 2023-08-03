@@ -1,15 +1,12 @@
 .Primary {
-
-    display: inline-block;
-    width: auto;
-    height: auto;
-    margin-left: 450px;
+    display: flex;
+    width: 664px;
+    height: 968px;
     padding: 24px 0px 0px 24px;
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-start;
     flex-shrink: 0;
-    background: #181818;
 }
 
 .VideoPlayer {
@@ -98,26 +95,158 @@
 }
 
 .Secondary {
-    float: right;
-    display: inline;
-    width: 500px;
+    /* display: flex; */
+    position: absolute;
+    top: 56px;
+    right: 164px;
+    width: 426px;
     height: 968px;
-    margin-right: 120px;
     flex-direction: column;
-    justify-content: flex-end;
-    align-items: left;
+    /* justify-content: flex-end; */
+    align-items: center;
     flex-shrink: 0;
     background: #181818;
 }
 
-.Secondary.Content {
-    margin-top: 0px;
-    align-items: left;
+.Content {
+    display: flex;
+    padding: 24px 24px 0px 0px;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
-.Top-Menu {
-    margin-top: 0px;
-    background: #181818;
+.Right-Top-Menu {
+    display: flex;
+    width: 402px;
+    padding: 1px 12px 2px 0px;
+    align-items: flex-start;
+}
+
+.Top-Menu-Item {
+    display: flex;
+    padding: 8px 8px 8px 0px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.Button {
+    display: flex;
+    padding: 8px 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 32px;
+    border: 0.3px solid var(--gray-color, #AAA);
+    background: var(--border-color, #303030);
+}
+
+.Button:hover {
+    background-color: white;
+    color: #303030;
+    cursor: pointer;  
+}
+
+.Videos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.Video {
+    display: flex;
+    padding-top: 8px;
+    align-items: flex-start;
+}
+
+.Thumbnail {
+    position: relative;
+    display: flex;
+    padding-right: 0px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.Images {
+    width: 168px;
+    height: 94px;
+}
+
+.VideoTime {
+    position: absolute;
+    bottom: 3px;
+    right: 3px;
+    display: inline-flex;
+    padding: 3px 6px;
+    align-items: flex-start;
+    gap: 10px;
+    background: var(--black, #000);
+    color: var(--white-color, #FFF);
+    font-family: Roboto;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.Thumbnail-Images {
+    display: flex;
+    width: 168px;
+    height: 94px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.Video-Text {
+    display: flex;
+    width: 226px;
+    padding: 7px 0px;
+    flex-direction: column;
+    align-items: flex-start;
+    color: var(--white-color, #FFF);
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 142.857% */
+}
+
+.Channel-Desc {
+    display: flex;
+    padding: 2px 0px;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.Channel-name {
+    display: flex;
+    width: 202px;
+    align-items: flex-start;
+    gap: 10px;
+    flex: 1 0 0;
+    color: var(--gray-color, #AAA);
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px; /* 150% */
+}
+
+.Channel-view {
+    display: flex;
+    width: 202px;
+    align-items: flex-start;
+    gap: 10px;
+    flex: 1 0 0;
+    color: var(--gray-color, #AAA);
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px; /* 150% */
 }
 
 #border {
@@ -405,9 +534,4 @@
 .Btn {
     margin-left: 32px;
     cursor: pointer;
-}
-
-#likeButton,
-#dislikeButton {
-    background-color: transparent;
 }

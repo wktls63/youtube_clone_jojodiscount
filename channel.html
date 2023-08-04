@@ -19,7 +19,7 @@
                 <img class="hamburger" src="icon/hamburger.png" alt="">
             </div>
             <div class="logo">
-                <img class="youtube-logo" onclick="newPage()" src="icon/Youtube-Logo.png" alt="">"
+                <img class="youtube-logo" onclick="newPage()" src="icon/Youtube-Logo.png" alt="">
             </div>
 
         </div>
@@ -309,7 +309,9 @@
                         <div class="subscribers">1.2M</div>
                     </div>
                 </div>
-                <button class="Subscribes-Btn">SUBSCRIBES</button>
+                <button id="Subscribes-Btn" class="Subscribes-Btn" onclick="toggleSubscription()"
+                        onclick="handleClick()">SUBSCRIBES
+                    </button>
             </div>
             <div class="Channel-Toolbar">
 
@@ -414,4 +416,5 @@
         })
     });
 </script>
+<script src="js/subscription.js"></script>
 </html>

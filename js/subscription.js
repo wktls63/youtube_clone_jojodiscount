@@ -7,10 +7,11 @@ function toggleSubscription() {
 
     if (isSubscribed) {
         subscribeBtn.textContent = "SUBSCRIBING";
+        subscribeBtn.style.width = '116px';
         subscribeBtn.style.backgroundColor = '#4d4d4d';
     } else {
         subscribeBtn.textContent = "SUBSCRIBES";
-        subscribeBtn.style.backgroundColor='red';
+        subscribeBtn.style.backgroundColor='#CC0000';
 
     }
 }

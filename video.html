@@ -19,7 +19,7 @@
                 <img class="hamburger" src="icon/hamburger.png" alt="">
             </div>
             <div class="logo">
-                <img class="youtube-logo" onclick="newPage()" src="icon/Youtube-Logo.png" alt="">"
+                <img class="youtube-logo" onclick="newPage()" src="icon/Youtube-Logo.png" alt="">
             </div>
         </div>
 
@@ -52,71 +52,73 @@
 
     </header>
 
-    <!-- 영상 정보와 오른쪽 사이드 바 -->
+    <!-- 영상 정보와 댓글 목록 -->
 
     <main class="Primary">
 
-        <div class="VideoPlayer">
-            <div class="Youtube Player" id="Youtube-Player"></div>
-            <!-- 여기에 비디오 플레이어 렌더 -->
-            <div class="Video-Info">
+        <div class="VideoContainer">
+            <div class="VideoPlayer">
+                <div class="Youtube Player" id="Youtube-Player"></div>
+                <!-- 여기에 비디오 플레이어 렌더 -->
                 <div class="Video-Info">
-                    <div class="Title">Blind Woodturner: Turning passion into fine art</div>
-                    <div class="Info">
-                        <div class="Info-text"></div>
-                        <div class="Top-Level">
-                            <!--좋아요 버튼-->
-                            <div class="like">
-                                <button id="likeButton" class="liked" onclick="toggleLike()">
-                                    <img class="liked" src="icon/liked.png" alt="">
-                                </button>
-                                <div id="likeCount" , class="Button-text">17</div>
-                            </div>
-                            <!-- 싫어요 버튼-->
-                            <div class="like">
-                                <button id="dislikeButton" class="liked" onclick="toggleDislike()">
-                                    <img class="liked" src="icon/disliked.png" alt="">
-                                </button>
-                                <div id="dislikeCount" ,class="Button-text">632</div>
-                            </div>
-                            <div class="like">
-                                <img class="liked" src="icon/share.png" alt="">
-                                <div class="Button-text">SHARE</div>
-                            </div>
-                            <div class="like">
-                                <img class="liked" src="icon/save.png" alt="">
-                                <div class="Button-text">SAVE</div>
-                            </div>
-                            <div class="like">
-                                <img class="liked" src="icon/more.png" alt="">
-                                <div class="Button-text"> </div>
+                    <div class="Video-Info">
+                        <div class="Title">Blind Woodturner: Turning passion into fine art</div>
+                        <div class="Info">
+                            <div class="Info-text"></div>
+                            <div class="Top-Level">
+                                <!--좋아요 버튼-->
+                                <div class="like">
+                                    <button id="likeButton" class="liked" onclick="toggleLike()">
+                                        <img class="liked" src="icon/liked.png" alt="">
+                                    </button>
+                                    <div id="likeCount" , class="Button-text">1000</div>
+                                </div>
+                                <!-- 싫어요 버튼-->
+                                <div class="like">
+                                    <button id="dislikeButton" class="liked" onclick="toggleDislike()">
+                                        <img class="liked" src="icon/disliked.png" alt="">
+                                    </button>
+                                    <div id="dislikeCount" class="Button-text">632</div>
+                                </div>
+                                <div class="like">
+                                    <img class="liked" src="icon/share.png" alt="">
+                                    <div class="Button-text">SHARE</div>
+                                </div>
+                                <div class="like">
+                                    <img class="liked" src="icon/save.png" alt="">
+                                    <div class="Button-text">SAVE</div>
+                                </div>
+                                <div class="like">
+                                    <img class="liked" src="icon/more.png" alt="">
+                                    <div class="Button-text"> </div>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <hr id="border">
                 </div>
-                <hr id="border">
             </div>
-        </div>
-        <div class="Video-Desc">
             <div class="Video-Desc">
-                <div class="Channel-Title">
-                    <img class="Pic" src="icon/marcus.png" alt="">
-                    <div class="Profile-Name">
-                        <div class="Name">Marcus Levin</div>
-                        <div class="Subscribe-People">1.2M subscribers</div>
+                <div class="Video-Desc">
+                    <div class="Channel-Title">
+                        <img class="Pic" src="icon/marcus.png" alt="">
+                        <div class="Profile-Name">
+                            <div class="Name">Marcus Levin</div>
+                            <div class="Subscribe-People">1.2M subscribers</div>
+                        </div>
+                        <button id="Subscribes-Btn" class="Subscribes-Btn" onclick="toggleSubscription()"
+                            onclick="handleClick()">SUBSCRIBES
+                        </button>
                     </div>
-                    <button id="Subscribes-Btn" class="Subscribes-Btn" onclick="toggleSubscription()"
-                        onclick="handleClick()">SUBSCRIBES
-                    </button>
+                    <div class="Channel-Info">
+                        Chris Fisher, also known as the Blind Woodturner, learned his craft by listening to
+                        hundreds of hoursof YouTube videos and experimenting in his workshop. Now he`s a YouTube creator
+                        himself, sells
+                        his products worldwide, and does demonstrations all around the country.
+                    </div>
+                    <div class="Btn">SHOW MORE</div>
+                    <hr id="border">
                 </div>
-                <div class="Channel-Info">
-                    Chris Fisher, also known as the Blind Woodturner, learned his craft by listening to
-                    hundreds of hoursof YouTube videos and experimenting in his workshop. Now he`s a YouTube creator
-                    himself, sells
-                    his products worldwide, and does demonstrations all around the country.
-                </div>
-                <div class="Btn">SHOW MORE</div>
-                <hr id="border">
             </div>
         </div>
 
@@ -137,13 +139,11 @@
                 </div>
                 <div class="comments-container">
                     <form id="comment-form">
-                        <input type="text" id="comment-input" placeholder="Add a public comment..."
+                        <input type="text" class="Comment-input" placeholder="Add a public comment...."
                             onkeypress="handleKeyPress(event)" autocomplete="off">
                     </form>
-                    <button class="comment-add">등록</button>
-                    <button class="comment-cancle">취소</button>
-                    <button class="comment-delete">삭제</button>
-                    <button class="comment-change">수정</button>
+                    <button class="Comment-Add">등록</button>
+                    <button class="Comment-Cancle" onclick="CancleComment()">취소</button>
                     <ul id="comments-list"></ul>
                 </div>
             </div>
@@ -288,4 +288,5 @@
 </script>
 <script src="js/like.js"></script>
 <script src="js/subscription.js"></script>
+
 </html>

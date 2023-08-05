@@ -144,7 +144,7 @@
 .Button:hover {
     background-color: white;
     color: #303030;
-    cursor: pointer;  
+    cursor: pointer;
 }
 
 .Videos {
@@ -211,7 +211,8 @@
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
-    line-height: 20px; /* 142.857% */
+    line-height: 20px;
+    /* 142.857% */
 }
 
 .Channel-Desc {
@@ -232,7 +233,8 @@
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
-    line-height: 18px; /* 150% */
+    line-height: 18px;
+    /* 150% */
 }
 
 .Channel-view {
@@ -246,7 +248,8 @@
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
-    line-height: 18px; /* 150% */
+    line-height: 18px;
+    /* 150% */
 }
 
 #border {
@@ -512,7 +515,7 @@
     width: Hug (116px);
     height: Hug (36px);
     /* padding: 10px 16px 10px 16px; */
-    margin-left: 358px;
+    margin-left: 355px;
     border-radius: 2px;
     /* gap: 10px; */
     cursor: pointer;
@@ -522,7 +525,7 @@
     font-weight: 700;
     line-height: 16px;
     letter-spacing: 0em;
-    text-align: right;
+    text-align: center;
     border: none;
     color: white;
 }

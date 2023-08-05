@@ -3,33 +3,34 @@
     height: Hug (286px);
     top: 395px;
     left: 240px;
-    padding-top:20px;
+    padding-top: 20px;
     background-color: #181818;
-    
+
 
 }
 
-.Channel-cover{
+.Channel-cover {
     display: flex;
     width: 83vw;
-    height:30vh;
+    height: 30vh;
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
 }
 
-.Channel-Title{
+.Channel-Title {
     display: inline-flex;
     padding: 20px 65px 4px 65px;
     align-items: flex-start;
     gap: 600px;
-    width:100vw;
-    height:120px;
+    width: 100vw;
+    height: 120px;
     background-color: #212121FF;
 
 }
+
 /* .Profile{
     display: flex;
     justify-content: center;
@@ -38,24 +39,27 @@
     
     
 } */
-.Pic{
+.Pic {
     display: flex;
     width: 80px;
     height: 80px;
-    padding-right:30px;
+    padding-right: 30px;
     justify-content: center;
     align-items: center;
 }
-.Channel-pro-img{
+
+.Channel-pro-img {
     border-radius: 80px;
     opacity: 0.6499999761581421;
 }
-.info{
-    display:flex;
+
+.info {
+    display: flex;
     flex-direction: column;
-    width:300px;
+    width: 300px;
 }
-.Name{
+
+.Name {
     color: var(--white-color, #FFF);
     font-family: Roboto;
     font-size: 24px;
@@ -63,14 +67,15 @@
     font-weight: 400;
     line-height: normal;
 }
-.subscribers{
+
+.subscribers {
     color: var(--gray-color, #AAA);
     font-family: Roboto;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-} 
+}
 
 .Subscribes-Btn {
     width: Hug (116px);
@@ -80,24 +85,24 @@
     gap: 10px;
     cursor: pointer;
     background-color: #CC0000;
-    margin-top:50px;
+    margin-top: 50px;
     font-family: Roboto;
     font-size: 14px;
     font-weight: 700;
     line-height: 16px;
     letter-spacing: 0em;
-    text-align: left;
+    text-align: center;
     border: none;
     color: white;
 }
 
 .Channel-Toolbar {
-    display:flex;
+    display: flex;
     width: Hug (1200px);
     height: Hug (48px);
     top: 292px;
     padding: 0px 65px 0px 65px;
-    margin-top:0px;
+    margin-top: 0px;
     background-color: #181818;
 
     font-family: Roboto;
@@ -107,25 +112,27 @@
     letter-spacing: 0em;
     text-align: left;
     color: #AAAAAA;
-    border: none; 
+    border: none;
     background-color: #212121FF;
 }
 
 
-.Channel-Toolbar .Menu{
+.Channel-Toolbar .Menu {
     display: flex;
-    width:120px;
-    height:30px;
-    margin:0px;
-    justify-content:  center;
-    
-   
+    width: 120px;
+    height: 30px;
+    margin: 0px;
+    justify-content: center;
+
+
 }
-.Search{
-    gap:300px;
-} 
-.Icon{
-    
+
+.Search {
+    gap: 300px;
+}
+
+.Icon {
+
     display: flex;
     width: 24px;
     height: 24px;
@@ -133,9 +140,10 @@
     justify-content: center;
     align-items: center;
     background-color: transparent;
-    
+
 }
-.Search .Btn{
+
+.Search .Btn {
     background-color: transparent;
 }
 
@@ -146,11 +154,11 @@
     height: 238px;
     padding: 24px 287px 24px 65px;
 }
-  
+
 .Small-Video-Desc {
     padding-bottom: 0px;
 }
-  
+
 .Video-Title,
 .Title,
 .Time {
@@ -159,7 +167,7 @@
     gap: 10px;
     padding-bottom: 20px;
 }
-  
+
 .Time {
     color: var(--gray-color, #aaa);
     font-family: Roboto;
@@ -168,8 +176,8 @@
     font-weight: 700;
     line-height: normal;
 }
-  
- /* .Title {
+
+/* .Title {
     font-family: Roboto;
     font-size: 14px;
     font-style: normal;
@@ -190,23 +198,23 @@
     line-height: normal;
     letter-spacing: 0.14px;
 }
-  
+
 .Player {
     padding-right: 24px;
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
 }
-  
+
 .Player>video {
     width: 424px;
     height: 238px;
 }
-  
+
 .Video-Desc>video {
     width: 214px;
 }
-  
+
 .Play-List {
     color: var(--white-color, #fff);
     font-family: Roboto;
@@ -220,26 +228,26 @@
     padding-top: 8px;
     align-items: flex-start;
 }
-  
+
 .Play-List>p {
     padding: 9px 8px 8px 0px;
     align-items: flex-start;
     gap: 10px;
 }
-  
+
 .Play-Btn {
     display: flex;
     padding: 6px 16px;
     align-items: flex-start;
 }
-  
+
 .Play-Btn>p {
     display: flex;
     padding: 3px 0px 2px 8px;
     align-items: flex-start;
     gap: 10px;
 }
-  
+
 .Play-Btn>* {
     color: var(--gray-color, #aaa);
     font-family: Roboto;
@@ -249,7 +257,7 @@
     line-height: normal;
     text-transform: uppercase;
 }
-  
+
 .Video-Desc>p {
     color: var(--white-color, #fff);
     font-family: Roboto;
@@ -257,13 +265,13 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-  
+
     display: flex;
     padding: 8px 0px;
     align-items: flex-start;
     gap: 10px;
 }
-  
+
 .Video-Desc-Views {
     color: var(--gray-color, #aaa);
     font-family: Roboto;
@@ -272,7 +280,7 @@
     font-weight: 400;
     line-height: normal;
 }
-  
+
 /* content */
 .Content {
     display: flex;
@@ -280,13 +288,13 @@
     flex-direction: column;
     align-items: flex-start;
 }
-  
+
 .Video-card {
     display: flex;
     padding: 24px 0px;
     align-items: flex-start;
 }
-  
+
 /* .Xsamll-video {
     padding-right: 6px;
     display: flex;

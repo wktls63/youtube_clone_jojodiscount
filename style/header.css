@@ -1,8 +1,9 @@
-body, html {
+body,
+html {
     margin: 0;
     padding: 0;
     background-color: #181818;
-  }
+}
 
 .header {
     height: 55px;
@@ -27,6 +28,7 @@ body, html {
     display: inline-flex;
     padding-right: 0px;
     align-items: center;
+    cursor: pointer;
 }
 
 .logo {
@@ -34,13 +36,15 @@ body, html {
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
-    margin-left:0px;
+    margin-left: 0px;
+    cursor: pointer;
+
 }
 
 .youtube-logo {
     width: 90px;
     height: 20px;
-  
+
 }
 
 .Icon {
@@ -50,14 +54,14 @@ body, html {
     align-items: flex-start;
     gap: 10px;
     color: white;
-    padding-left:0px;
+    padding-left: 0px;
 }
 
 .hamburger {
     width: 24px;
     height: 24px;
-    margin-left:5px;
-    
+    margin-left: 5px;
+
 }
 
 
@@ -75,7 +79,8 @@ body, html {
     height: 36px;
     padding-left: 10px;
     font-size: 16px;
-    color: whitesmoke;    /* search-bar 안에 텍스트 입력시 색상 변경 작업 추가 07.31 by. 박세용 */
+    color: whitesmoke;
+    /* search-bar 안에 텍스트 입력시 색상 변경 작업 추가 07.31 by. 박세용 */
     border: 1px solid #4d4d4d;
     border-radius: 2px;
     box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05);
@@ -96,6 +101,7 @@ body, html {
     border-color: #4d4d4d;
     margin-left: -1px;
     margin-right: 10px;
+    cursor: pointer;
 }
 
 .search-button,
@@ -142,6 +148,7 @@ body, html {
     border-radius: 20px;
     border: none;
     background-color: #121212;
+    cursor: pointer;
 }
 
 .voice-search-icon {
@@ -192,13 +199,13 @@ body, html {
 }
 
 
-.Profile{
+.Profile {
     margin-left: auto;
-    margin:auto 0;
+    margin: auto 0;
     display: flex;
     flex-direction: row;
-    
-    width: 204px;
+
+    width: 250px;
     height: 40px;
     justify-content: center;
     align-items: flex-start;
@@ -206,32 +213,35 @@ body, html {
     flex-shrink: 0;
 }
 
-.ProfileDetail{
+.ProfileDetail {
 
-    float:right;
+    float: right;
     display: flex;
     padding: 4px 14px;
     align-items: flex-start;
     gap: 10px;
+    cursor: pointer;
 }
 
-.imgs{
+.imgs {
     width: 24px;
     height: 24px;
 }
 
-.ProfileImg{
-    float:right;
+.ProfileImg {
+    float: right;
     display: flex;
-padding: 4px 14px;
-align-items: flex-start;
-gap: 10px;
-
+    padding: 4px 14px;
+    align-items: flex-start;
+    gap: 10px;
+    cursor: pointer;
 }
-.profileimg{
-    width: 32px;
-flex-shrink: 0;
-align-self: stretch;
+
+.profileimg {
+    width: 50px;
+    padding-right: 30px;
+    flex-shrink: 0;
+    align-self: stretch;
 
 }
 
@@ -245,7 +255,7 @@ align-self: stretch;
     align-items: center;
     justify-content: flex-start;
     gap: 1px;
-   
+
 }
 
 .Item {
@@ -267,10 +277,11 @@ align-self: stretch;
     text-align: center;
 }
 
-.Item:hover { /* Top-Menu Item hover 추가 07.31 by.박세용 */
+.Item:hover {
+    /* Top-Menu Item hover 추가 07.31 by.박세용 */
     background-color: white;
     color: #303030;
-    cursor: pointer;  
+    cursor: pointer;
 }
 
 .top-border {
@@ -286,6 +297,7 @@ align-self: stretch;
 
     background: var(--border-color, #303030);
 }
+
 .Icon {
     display: inline-flex;
     padding: 20px;
@@ -294,6 +306,6 @@ align-self: stretch;
     background: rgba(33, 33, 33, 0.90);
 }
 
-.mainpage{
-    display:flex;
+.mainpage {
+    display: flex;
 }

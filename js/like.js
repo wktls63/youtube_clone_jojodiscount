@@ -1,7 +1,7 @@
 let isLiked = false;     
 let isDisliked = false;  
-let likeCount = parseInt(document.getElementById("likeCount").textContent, 10);
-let dislikeCount = parseInt(document.getElementById("dislikeCount").textContent, 10); 
+let likeCount = 1000;
+let dislikeCount = 632; 
 
 // 좋아요 status 관리
 function toggleLike() {

@@ -298,16 +298,16 @@
         <!----------------------------- 채널 영역 -------------------------------->
         <nav class="Channel">
 
-            <img class="Channel-cover" src="/img/channel-cover.png">
+            <img class="Channel-cover" id="Channel-cover" src="/img/channel-cover.png">
 
             <div class="Channel-Title">
                 <div class="Profile">
                     <div class="Pic">
-                        <img class="Channel-pro-img" src="/img/Channel-pro-img.png">
+                        <img class="Channel-pro-img" id="Channel-pro-img" src="/img/Channel-pro-img.png">
                     </div>
                     <div class="info">
-                        <div class="Name">Marcus Levin</div>
-                        <div class="subscribers">1.2M</div>
+                        <div class="Name" id="Name">Marcus Levin</div>
+                        <div class="subscribers" id="subscribers">1.2M</div>
                     </div>
                 </div>
                 <button id="Subscribes-Btn" class="Subscribes-Btn" onclick="toggleSubscription()"
@@ -413,7 +413,12 @@
 <script>
     // HTML 파싱된 후 channelVideoRender() 함수를 실행하는 DOMContentLoaded 이벤트 핸들러를 등록
     document.addEventListener('DOMContentLoaded', () => {
-        channelVideoRender().catch(error => {
+        // 주소 쿼리 값을 id로 담아서 전달
+        let url = window.location.search;
+        let locd = url.substring(4, 10);
+        let id = String(locd)
+        
+        channelVideoRender(id).catch(error => {
             console.error('에러:', error);
         })
     });

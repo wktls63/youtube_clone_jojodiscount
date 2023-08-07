@@ -19,18 +19,19 @@ async function getVideoList() {
 }
 
 // 채널 정보를 가져오는 함수
-async function getChannelVideoList() {
-  const response = await fetch('http://oreumi.appspot.com/channel/getChannelVideo?video_channel=oreumi', {
-    method: 'POST'
+async function getChannelVideoList(channelId) {
+  const response = await fetch(`https://oreumi.appspot.com/channel/getChannelInfo?video_channel=${channelId}`, {
+    method: 'POST', headers: {'accept': 'application/json'}
   });
   const data = await response.json();
   return data;
 }
 
 // 채널 비디오 가져오기
-async function getChannelVideo() {
-  const apiUrl = `http://oreumi.appspot.com/channel/getChannelVideo?video_channel=oreumi`;
-  const response = await fetch(apiUrl);
+async function getChannelVideo(channelId) {
+  const response = await fetch(`https://oreumi.appspot.com/channel/getChannelVideo?video_channel=${channelId}`, {
+    method: 'POST', headers: {'accept': 'application/json'}
+  });
   const data = await response.json();
   return data;
 }
@@ -48,23 +49,28 @@ async function getVideoInfo(videoId) {
 // 검색 기능을 지원하도록 업데이트된 displayVideoList() 함수
 async function displayVideoList(searchQuery = '') {
   const videoListContainer = document.getElementById('video-preview');
+  const videoList = await getVideoList();
   let videoListHtml = ''; // 비디오 정보를 누적할 빈 문자열
 
   // 검색어를 소문자로 변환
   const lowerCaseSearchQuery = searchQuery.toLowerCase();
 
   // 비디오 정보를 한 번에 가져오는 비동기 함수 호출
-  const videoInfoPromises = [];
-  for (let videoId = 0; videoId <= 20; videoId++) {
-    videoInfoPromises.push(getVideoInfo(videoId));
-  }
+  const videoInfoPromises = videoList.map((video) => getVideoInfo(video.video_id));
   const videoInfoList = await Promise.all(videoInfoPromises);
 
+  const channelInfoPromises = videoInfoList.map((videoInfo) => getChannelVideoList(videoInfo.video_channel));
+  const channelInfoList = await Promise.all(channelInfoPromises);
 
-  for (const videoInfo of videoInfoList) {
+
+  for (let i = 0; i < videoList.length; i++) {
     // 비디오 제목과 채널 이름을 소문자로 변환
-    const lowerCaseVideoTitle = videoInfo.video_title.toLowerCase();
-    const lowerCaseVideoChannel = videoInfo.video_channel.toLowerCase();
+    const lowerCaseVideoTitle = videoInfoList[i].video_title.toLowerCase();
+    const lowerCaseVideoChannel = videoInfoList[i].video_channel.toLowerCase();
+
+    const videoId = videoInfoList[i].video_id
+    const videoInfo = videoInfoList[i]
+    const channelProfile = channelInfoList[i]
 
 
     // 대소문자를 구분하지 않고 검색을 하기 위해 소문자로 변환한 값을 비교
@@ -72,9 +78,10 @@ async function displayVideoList(searchQuery = '') {
       continue;
     }
 
-    // 비디오 화면 URL
-    let videoURL = `location.href="./video.html?id=${videoInfo.video_id}"`;
-
+    //URL
+    let videoURL = `location.href="./video.html?id=${videoId}"`;
+    let channelURL = `location.href="./channel.html?id=${channelProfile.channel_name}"`;
+    
     // 조회수를 포맷하여 "45,4819" 형식으로 변환
     const formattedViews = formatViews(videoInfo.views);
 
@@ -86,11 +93,11 @@ async function displayVideoList(searchQuery = '') {
             </div>
             <div class="video-info-grid">
               <div class="channel-picture"> 
-                <img class="profile-picture" onclick="newChannelPage()" alt="Thumbnail" src="icon/alan.png" />
+                <img class="profile-picture" style="cursor:pointer;" onclick='${channelURL}' alt="Thumbnail" src='${channelProfile.channel_profile}' />
               </div>
               <div class="video-info">
                 <p class="video-title">${videoInfo.video_title}</p>
-                <p class="video-author" onclick='channelPage()'>Channel: ${videoInfo.video_channel}</p>
+                <p class="video-author" onclick='${channelURL}'>Channel: ${videoInfo.video_channel}</p>
                 <p class="video-stats">조회수: ${formattedViews} 회 &#183; ${videoInfo.upload_date}</p>
               </div>
             </div>

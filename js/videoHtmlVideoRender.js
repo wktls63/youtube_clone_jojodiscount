@@ -1,9 +1,56 @@
-// 숫자를 "454,4819" 형식으로 변환하는 함수
-function formatViews(views) {
-    return views.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+// 등록 후 경과 된 시간을 변환하여 표시하는 함수
+function formatElapsedTime(date) {
+    const start = new Date(date);
+    const end = new Date(); // 현재 날짜와 시간
+  
+    const diff = Math.floor((end - start) / 1000); // 경과 시간(초 단위)
+  
+    const times = [
+      { name: "년", seconds: 60 * 60 * 24 * 365 },
+      { name: "개월", seconds: 60 * 60 * 24 * 30 },
+      { name: "일", seconds: 60 * 60 * 24 },
+      { name: "시간", seconds: 60 * 60 },
+      { name: "분", seconds: 60 },
+    ];
+  
+    // 년 단위부터 알맞은 단위 찾기
+    for (const value of times) {
+      const betweenTime = Math.floor(diff / value.seconds);
+  
+      // 큰 단위는 0보다 작은 소수 단위가 나옴
+      if (betweenTime >= 1) {
+        return `${betweenTime}${value.name} 전`;
+      }
+    }
+  
+    // 현재 시간과의 차이가 모든 단위보다 작을 경우
+    return "방금 전";
   }
   
-  
+  // 조회수를 "조회수 1.3만회" 형식으로 변환하는 함수
+  function formatViewsCount(views) {
+    if (views >= 100000000) {
+      const billions = Math.floor(views / 100000000);
+      const millions = Math.floor((views % 100000000) / 10000000);
+      return `조회수 ${billions}.${millions}억회`;
+    } else if (views >= 10000) {
+      const millions = Math.floor(views / 10000);
+      const thousands = Math.floor((views % 10000) / 1000);
+      return `조회수 ${millions}.${thousands}만회`;
+    } else {
+      return `조회수 ${views}회`;
+    }
+  }
+  // 구독자수를 포맷해주는 함수 
+  function formatSubscribersCount(subscribers) {
+    if (subscribers >= 1000000) {
+      return `구독자 ${Math.floor(subscribers / 10000)}만명`;
+    } else if (subscribers >= 100000) {
+      return `구독자 ${Math.floor(subscribers / 1000)}.${Math.floor((subscribers % 1000) / 100)}만명`;
+    } else {
+      return `구독자 ${subscribers}명`;
+    }
+  }
   // 비디오 리스트를 가져오는 함수
   async function getVideoList() {
     const response = await fetch('http://oreumi.appspot.com/video/getVideoList');
@@ -69,7 +116,8 @@ function formatViews(views) {
       const videoId = videoInfo.video_id;
   
       // 조회수 변환 함수
-      const formattedViews = formatViews(videoInfo.views);
+      const formattedViews = formatViewsCount(videoInfo.views);
+      const formattedUploadDate = formatElapsedTime(videoInfo.upload_date);
   
       if (id == videoId) {
         const videoPlayerHtml = `
@@ -82,7 +130,7 @@ function formatViews(views) {
                       <div class="Video-Info">
                           <div class="Title">${videoInfo.video_title}</div>
                           <div class="Info">
-                              <div class="Info-text">${formattedViews} views . ${videoInfo.upload_date}</div>
+                              <div class="Info-text">${formattedViews.replace(".0", "")} &nbsp; ${formattedUploadDate}</div>
                               <div class="Top-Level">
                                   <!--좋아요 버튼-->
                                   <div class="like">
@@ -113,6 +161,11 @@ function formatViews(views) {
                               </div>
                           </div>
                       </div>
+                      <style>
+                      .liked{
+                        margin-top:7px;
+                      }
+                      </style>
               `;
         playerHtml += videoPlayerHtml
   
@@ -121,16 +174,26 @@ function formatViews(views) {
     }
   
     if (id < 10) {
+      const formattedSubscribersCount = formatSubscribersCount(channelInfoList[10].subscribers)
+
       const videoChannelDesc = `
                     <div class="Channel-Title">
                       <img class="Pic" style="cursor: pointer; width: 50px; height: 50px; border-radius: 70%; overflow: hidden;" onclick='${oreumiChannelURL}' src="${channelInfoList[0].channel_profile}" alt="">
                       <div class="Profile-Name">
                           <div class="Name" style="cursor:pointer;" onclick='${oreumiChannelURL}'>${channelInfoList[0].channel_name}</div>
-                          <div class="Subscribe-People">구독자 ${channelInfoList[10].subscribers} 명</div>
+                          <div class="Subscribe-People">${formattedSubscribersCount.replace(".0", "")}</div>
                       </div>
                       <button id="Subscribes-Btn" class="Subscribes-Btn" onclick="toggleSubscription()"
                           onclick="handleClick()">SUBSCRIBES
                       </button>
+                      <style>
+                      .Subscribes-Btn {
+                        float:right;
+                        margin-left:50px;
+                        margin-bottom:50px;
+                        width:116px;
+                      }
+                      </style>
                     </div>
                     <div class="Channel-Info">
                       <p>안녕하세요. 이스트소프트입니다.</p>
@@ -142,12 +205,14 @@ function formatViews(views) {
       vidoDescHtml += videoChannelDesc
   
     } else {
+      const formattedSubscribersCount = formatSubscribersCount(channelInfoList[10].subscribers)
+
       const videoChannelDescTwo = `
                     <div class="Channel-Title">
                       <img class="Pic" style="cursor: pointer; width: 50px; height: 50px; border-radius: 70%; overflow: hidden;" onclick='${rabbitChannelURL}' src="${channelInfoList[10].channel_profile}" alt="">
                       <div class="Profile-Name">
                           <div class="Name" style="cursor:pointer;" onclick='${rabbitChannelURL}'>${channelInfoList[10].channel_name}</div>
-                          <div class="Subscribe-People">구독자 ${channelInfoList[10].subscribers} 명</div>
+                          <div class="Subscribe-People">${formattedSubscribersCount.replace(".0", "")}</div>
                       </div>
                       <button id="Subscribes-Btn" class="Subscribes-Btn" onclick="toggleSubscription()"
                           onclick="handleClick()">SUBSCRIBES
@@ -186,8 +251,13 @@ function formatViews(views) {
     for (const videoInfo of videoInfoList) {
       // 비디오 화면 URL
       let videoURL = `location.href="./video.html?id=${videoInfo.video_id}"`;
-      // 조회수를 포맷하여 "45,4819" 형식으로 변환
-      const formattedViews = formatViews(videoInfo.views);
+      
+      // 조회수 변환
+      const formattedViews = formatViewsCount(videoInfo.views);
+      // 업로드 날짜 변환
+      const formattedUploadDate = formatElapsedTime(videoInfo.upload_date);
+
+
       // 각각의 비디오 정보를 표시하는 HTML 코드를 생성
       const videoItemHtml = `
           <style>
@@ -207,7 +277,7 @@ function formatViews(views) {
               <div class="video-info">
                 <p class="video-title">${videoInfo.video_title}</p>
                 <p class="video-author">Channel: ${videoInfo.video_channel}</p>
-                <p class="video-stats">조회수: ${formattedViews} 회 &#183; ${videoInfo.upload_date}</p>
+                <p class="video-stats">${formattedViews.replace(".0", "")} &#183; ${formattedUploadDate}</p>
               </div>
             </div>
           </div>
@@ -219,3 +289,8 @@ function formatViews(views) {
     // videoListHtml을 videoListContainer의 내부 콘텐츠로 설정
     videoListContainer.innerHTML = videoListHtml;
   }
+
+    // 페이지 로딩 시에 비디오 목록을 표시하도록 설정
+    document.addEventListener("DOMContentLoaded", () => {
+        displayVideoList();
+    });

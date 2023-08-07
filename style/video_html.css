@@ -1,8 +1,7 @@
 .Primary {
     display: flex;
     width: 664px;
-    height: 968px;
-    padding: 220px 0px 0px 24px;
+    padding: 10px 0px 0px 24px;
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-start;

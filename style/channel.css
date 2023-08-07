@@ -395,3 +395,21 @@
     float: left;
 
 } */
+
+
+.List {
+    display: inline-flex;
+}
+
+.Play {
+    margin-left: 20px;
+    background-color: #181818;
+    cursor: pointer;
+}
+
+.Play-All {
+    margin-left: 20px;
+    color: #AAAAAA;
+    background-color: #181818;
+    cursor: pointer;
+}

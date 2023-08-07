@@ -309,3 +309,52 @@ html {
 .mainpage {
     display: flex;
 }
+
+.ProfileDetail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.ProfileDetail .tooltip {
+    position: absolute;
+    background-color: gray;
+    color: white;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 2px;
+    font-size: 12px;
+    bottom: -30px;
+    opacity: 0;
+    transition: opacity 0.15s;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.ProfileDetail:hover .tooltip {
+    opacity: 1;
+}
+
+.logo .tooltip {
+    position: absolute;
+    background-color: white;
+    color: black;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 2px;
+    font-size: 12px;
+    bottom: -20px;
+    opacity: 0;
+    transition: opacity 0.15s;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.logo:hover .tooltip {
+    opacity: 1;
+}

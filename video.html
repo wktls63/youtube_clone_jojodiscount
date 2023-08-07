@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="style/video_comment.css">
 </head>
 
-<body>
+<div>
     <header class="header">
 
         <div class="Yt-Button">
@@ -57,73 +57,19 @@
     </header>
 
     <!-- 영상 정보와 댓글 목록 -->
+    <div class="Vconatiner">
+        <div class="Primary">
 
-    <main class="Primary">
-
-        <div class="VideoContainer">
-            <div class="VideoPlayer">
-                <div class="Youtube Player" id="Youtube-Player"></div>
-                <!-- 여기에 비디오 플레이어 렌더 -->
-                <div class="Video-Info">
-                    <div class="Video-Info">
-                        <div class="Title">Blind Woodturner: Turning passion into fine art</div>
-                        <div class="Info">
-                            <div class="Info-text">576,969 views . Oct 8, 2021</div>
-                            <div class="Top-Level">
-                                <!--좋아요 버튼-->
-                                <div class="like">
-                                    <button id="likeButton" class="liked" onclick="toggleLike()">
-                                        <img class="liked" src="icon/liked.png" alt="">
-                                    </button>
-                                    <div id="likeCount" , class="Button-text">1000</div>
-                                </div>
-                                <!-- 싫어요 버튼-->
-                                <div class="like">
-                                    <button id="dislikeButton" class="liked" onclick="toggleDislike()">
-                                        <img class="liked" src="icon/disliked.png" alt="">
-                                    </button>
-                                    <div id="dislikeCount" class="Button-text">632</div>
-                                </div>
-                                <div class="like">
-                                    <img class="liked" src="icon/share.png" alt="">
-                                    <div class="Button-text">SHARE</div>
-                                </div>
-                                <div class="like">
-                                    <img class="liked" src="icon/save.png" alt="">
-                                    <div class="Button-text">SAVE</div>
-                                </div>
-                                <div class="like">
-                                    <img class="liked" src="icon/more.png" alt="">
-                                    <div class="Button-text"> </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="VideoContainer">
+                <div class="VideoPlayer">
+                    <div class="Youtube Player" id="Youtube-Player"></div>
+                    <!-- 여기에 비디오 플레이어 렌더 -->
                     <hr id="border">
                 </div>
             </div>
-            <div class="Video-Desc">
-                <div class="Video-Desc">
-                    <div class="Channel-Title">
-                        <img class="Pic" src="icon/marcus.png" alt="">
-                        <div class="Profile-Name">
-                            <div class="Name">Marcus Levin</div>
-                            <div class="Subscribe-People">1.2M subscribers</div>
-                        </div>
-                        <button id="Subscribes-Btn" class="Subscribes-Btn" onclick="toggleSubscription()"
-                            onclick="handleClick()">SUBSCRIBES
-                        </button>
-                    </div>
-                    <div class="Channel-Info">
-                        Chris Fisher, also known as the Blind Woodturner, learned his craft by listening to
-                        hundreds of hoursof YouTube videos and experimenting in his workshop. Now he`s a YouTube creator
-                        himself, sells
-                        his products worldwide, and does demonstrations all around the country.
-                    </div>
-                    <div class="Btn">SHOW MORE</div>
-                    <hr id="border">
+                <div class="Video-Desc" id="Video-Desc">
+                    <!-- 이곳에 비디오 채널 정보 렌더 -->
                 </div>
-            </div>
         </div>
 
         <!-- 코멘트 -->
@@ -155,9 +101,8 @@
             <div class="Comments">
                 <!--여기에 추가 댓글들 -->
             </div>
-    </main>
-
-
+        </div>
+    </div>
     <!-- 사이드 영상 목록 -->
     <aside class="Secondary">
 

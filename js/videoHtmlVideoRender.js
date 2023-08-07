@@ -12,18 +12,19 @@ async function getVideoList() {
 }
 
 // 채널 정보를 가져오는 함수
-async function getChannelVideoList() {
-  const response = await fetch('http://oreumi.appspot.com/channel/getChannelVideo?video_channel=oreumi', {
-    method: 'POST'
+async function getChannelVideoList(channelId) {
+  const response = await fetch(`https://oreumi.appspot.com/channel/getChannelInfo?video_channel=${channelId}`, {
+    method: 'POST', headers: {'accept': 'application/json'}
   });
   const data = await response.json();
   return data;
 }
 
-// 채널 비디오 가져오는 함수
-async function getChannelVideo() {
-  const apiUrl = `http://oreumi.appspot.com/channel/getChannelVideo?video_channel=oreumi`;
-  const response = await fetch(apiUrl);
+// 채널 비디오 가져오기
+async function getChannelVideo(channelId) {
+  const response = await fetch(`https://oreumi.appspot.com/channel/getChannelVideo?video_channel=${channelId}`, {
+    method: 'POST', headers: {'accept': 'application/json'}
+  });
   const data = await response.json();
   return data;
 }
@@ -45,11 +46,23 @@ async function videoPlyerRender(id) {
   const videoList = await getVideoList();
 
   const videoPlayer = document.getElementById('Youtube-Player');
+  const videoDesc = document.getElementById('Video-Desc')
 
   let playerHtml = '';
+  let vidoDescHtml = '';
 
   const videoInfoPromises = videoList.map((video) => getVideoInfo(video.video_id));
   const videoInfoList = await Promise.all(videoInfoPromises);
+
+  const channelInfoPromises = videoInfoList.map((videoInfo) => getChannelVideoList(videoInfo.video_channel));
+  const channelInfoList = await Promise.all(channelInfoPromises);
+
+  console.log(channelInfoList)
+
+  // URL
+  const oreumiChannelURL = `location.href="./channel.html?id=oreumi"`;
+  const rabbitChannelURL = `location.href="./channel.html?id=나와%20토끼들"`;
+
 
   for (let i = 0; i < videoInfoList.length; i++) {
     const videoInfo = videoInfoList[i];
@@ -58,9 +71,6 @@ async function videoPlyerRender(id) {
     // 조회수 변환 함수
     const formattedViews = formatViews(videoInfo.views);
 
-    // 비디오 url
-    let videoURL = `location.href="./video.html?id=${videoId}"`;
-
     if (id == videoId) {
       const videoPlayerHtml = `
                 <div>
@@ -68,13 +78,94 @@ async function videoPlyerRender(id) {
                     <source src='${videoInfo.video_link}'>
                 </video>
                 </div>
+                <div class="Video-Info">
+                    <div class="Video-Info">
+                        <div class="Title">${videoInfo.video_title}</div>
+                        <div class="Info">
+                            <div class="Info-text">${formattedViews} views . ${videoInfo.upload_date}</div>
+                            <div class="Top-Level">
+                                <!--좋아요 버튼-->
+                                <div class="like">
+                                    <button id="likeButton" class="liked" onclick="toggleLike()">
+                                        <img class="liked" src="icon/liked.png" alt="">
+                                    </button>
+                                    <div id="likeCount" , class="Button-text">1000</div>
+                                </div>
+                                <!-- 싫어요 버튼-->
+                                <div class="like">
+                                    <button id="dislikeButton" class="liked" onclick="toggleDislike()">
+                                        <img class="liked" src="icon/disliked.png" alt="">
+                                    </button>
+                                    <div id="dislikeCount" class="Button-text">632</div>
+                                </div>
+                                <div class="like">
+                                    <img class="liked" src="icon/share.png" alt="">
+                                    <div class="Button-text">SHARE</div>
+                                </div>
+                                <div class="like">
+                                    <img class="liked" src="icon/save.png" alt="">
+                                    <div class="Button-text">SAVE</div>
+                                </div>
+                                <div class="like">
+                                    <img class="liked" src="icon/more.png" alt="">
+                                    <div class="Button-text"> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
             `;
       playerHtml += videoPlayerHtml
 
     }
 
   }
+
+  if (id < 10) {
+    const videoChannelDesc = `
+                  <div class="Channel-Title">
+                    <img class="Pic" style="cursor: pointer; width: 50px; height: 50px; border-radius: 70%; overflow: hidden;" onclick='${oreumiChannelURL}' src="${channelInfoList[0].channel_profile}" alt="">
+                    <div class="Profile-Name">
+                        <div class="Name" style="cursor:pointer;" onclick='${oreumiChannelURL}'>${channelInfoList[0].channel_name}</div>
+                        <div class="Subscribe-People">구독자 ${channelInfoList[10].subscribers} 명</div>
+                    </div>
+                    <button id="Subscribes-Btn" class="Subscribes-Btn" onclick="toggleSubscription()"
+                        onclick="handleClick()">SUBSCRIBES
+                    </button>
+                  </div>
+                  <div class="Channel-Info">
+                    <p>안녕하세요. 이스트소프트입니다.</p>
+                    <p>이스트소프트는 정부의 디지털 인재양성 및 고용창출을 위한</p>
+                    <p>K-디지털 트레이닝 사업의 훈련 기관으로 선정되어,</p>
+                    <p>올해 마지막 [ESTsoft] 백엔드 개발자 부트캠프 오르미 3기 교육생 모집이 시작되었습니다.</p>
+                  </div>
+    `;
+    vidoDescHtml += videoChannelDesc
+
+  } else {
+    const videoChannelDescTwo = `
+                  <div class="Channel-Title">
+                    <img class="Pic" style="cursor: pointer; width: 50px; height: 50px; border-radius: 70%; overflow: hidden;" onclick='${rabbitChannelURL}' src="${channelInfoList[10].channel_profile}" alt="">
+                    <div class="Profile-Name">
+                        <div class="Name" style="cursor:pointer;" onclick='${rabbitChannelURL}'>${channelInfoList[10].channel_name}</div>
+                        <div class="Subscribe-People">구독자 ${channelInfoList[10].subscribers} 명</div>
+                    </div>
+                    <button id="Subscribes-Btn" class="Subscribes-Btn" onclick="toggleSubscription()"
+                        onclick="handleClick()">SUBSCRIBES
+                    </button>
+                  </div>
+                  <div class="Channel-Info">
+                    <p>안녕하세요. 이스트소프트입니다.</p>
+                    <p>이스트소프트는 정부의 디지털 인재양성 및 고용창출을 위한</p>
+                    <p>K-디지털 트레이닝 사업의 훈련 기관으로 선정되어,</p>
+                    <p>올해 마지막 [ESTsoft] 백엔드 개발자 부트캠프 오르미 3기 교육생 모집이 시작되었습니다.</p>
+                  </div>
+    `;
+    vidoDescHtml += videoChannelDescTwo
+  }
+
+
   videoPlayer.innerHTML = playerHtml;
+  videoDesc.innerHTML = vidoDescHtml;
 
 }
 

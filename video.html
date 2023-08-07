@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="style/video_comment.css">
 </head>
 
-<div>
+<body>
     <header class="header">
 
         <div class="Yt-Button">
@@ -57,79 +57,74 @@
     </header>
 
     <!-- 영상 정보와 댓글 목록 -->
-    <div class="Vconatiner">
+    <div class=Vcontainer>
         <div class="Primary">
-
             <div class="VideoContainer">
                 <div class="VideoPlayer">
                     <div class="Youtube Player" id="Youtube-Player"></div>
                     <!-- 여기에 비디오 플레이어 렌더 -->
-                    <hr id="border">
                 </div>
-            </div>
                 <div class="Video-Desc" id="Video-Desc">
-                    <!-- 이곳에 비디오 채널 정보 렌더 -->
-                </div>
-        </div>
-
-        <!-- 코멘트 -->
-        <div class="Comment">
-            <div class="Short-By">
-                <div class="Count">286 Comments</div>
-                <div class="Comment-Icon">
-                    <img src="svg/Dropdown.svg" alt="정렬">
-                </div>
-                <div class="Short-by">SORT BY</div>
-            </div>
-
-            <div class="Comment-Content">
-                <div class="Profile-pic"></div>
-                <div class="User-Avatar">
-                    <img src="img/Profile.png" alt="comment-user-avatar">
-                </div>
-                <div class="comments-container">
-                    <form id="comment-form">
-                        <input type="text" class="Comment-input" placeholder="Add a public comment...."
-                            onkeypress="handleKeyPress(event)" autocomplete="off">
-                    </form>
-                    <button class="Comment-Cancel" onclick="CancelComment()">Delete</button>
-                    <button class="Comment-Add">Write</button>
-                    <ul id="comments-list"></ul>
+                    <!-- 여기에 비디오 채널 렌더 -->
                 </div>
             </div>
 
-            <div class="Comments">
-                <!--여기에 추가 댓글들 -->
-            </div>
-        </div>
-    </div>
-    <!-- 사이드 영상 목록 -->
-    <aside class="Secondary">
-
-        <div class="Content">
-
-            <div class="Right-Top-Menu">
-
-                <div class="Top-Menu-Item">
-                    <div class="Button">All</div>
-                </div>
-                <div class="Top-Menu-Item">
-                    <div class="Button">From Marcus Levin</div>
-                </div>
-            </div>
-
-            <!-- 동영상 목록 -->
-            <div class="main-video">
-                <section class="video-grid" id="video-grid">
-                    <div class="video-preview" id="video-preview">
-                        <!-- 이곳에 videoRender.js -->
+            <!-- 코멘트 -->
+            <div class="Comment">
+                <div class="Short-By">
+                    <div class="Count">286 Comments</div>
+                    <div class="Comment-Icon">
+                        <img src="svg/Dropdown.svg" alt="정렬">
                     </div>
-                </section>
+                    <div class="Short-by">SORT BY</div>
+                </div>
+
+                <div class="Comment-Content">
+                    <div class="Profile-pic"></div>
+                    <div class="User-Avatar">
+                        <img src="img/Profile.png" alt="comment-user-avatar">
+                    </div>
+                    <div class="comments-container">
+                        <form id="comment-form">
+                            <input type="text" class="Comment-input" placeholder="Add a public comment...."
+                                onkeypress="handleKeyPress(event)" autocomplete="off">
+                        </form>
+                        <button class="Comment-Cancel" onclick="CancelComment()">Delete</button>
+                        <button class="Comment-Add">Write</button>
+                        <ul id="comments-list"></ul>
+                    </div>
+                </div>
+
+                <div class="Comments">
+                    <!--여기에 추가 댓글들 -->
+                </div>
             </div>
+        </div>
+        <!-- 사이드 영상 목록 -->
+        <aside class="Secondary">
 
-    </aside>
+            <div class="Content">
 
+                <div class="Right-Top-Menu">
 
+                    <div class="Top-Menu-Item">
+                        <div class="Button">All</div>
+                    </div>
+                    <div class="Top-Menu-Item">
+                        <div class="Button">From Marcus Levin</div>
+                    </div>
+                </div>
+
+                <!-- 동영상 목록 -->
+                <div class="main-video">
+                    <section class="video-grid" id="video-grid">
+                        <div class="video-preview" id="video-preview">
+                            <!-- 이곳에 videoRender.js -->
+                        </div>
+                    </section>
+                </div>
+        </aside>
+    </div>
 </body>
 <script src="js/location.js"></script>
 <script src="js/video_comment.js"></script>

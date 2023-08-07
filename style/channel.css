@@ -14,6 +14,11 @@
     left: 240px;
     padding-top: 20px;
     background-color: #181818;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> b8744e569119575bfe5eb50f8e50c6f32970e971
 }
 
 .Channel-cover {
@@ -304,6 +309,7 @@
     align-items: flex-start;
 }
 
+<<<<<<< HEAD
 .List {
     display: inline-flex;
 }
@@ -321,6 +327,8 @@
     cursor: pointer;
 }
 
+=======
+>>>>>>> b8744e569119575bfe5eb50f8e50c6f32970e971
 /* .Xsamll-video {
     padding-right: 6px;
     display: flex;

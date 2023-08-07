@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
     <title>Video</title>
     <link rel="stylesheet" href="style/header.css">
     <link rel="stylesheet" href="style/general.css">
@@ -57,7 +58,8 @@
     <main class="Primary">
 
         <div class="VideoPlayer">
-            <div class="Youtube Player"></div>
+            <div class="Youtube Player" id="Youtube-Player"></div>
+            <!-- 여기에 비디오 플레이어 렌더 -->
             <div class="Video-Info">
                 <div class="Video-Info">
                     <div class="Title">Blind Woodturner: Turning passion into fine art</div>
@@ -139,6 +141,10 @@
                         <input type="text" id="comment-input" placeholder="Add a public comment..."
                             onkeypress="handleKeyPress(event)" autocomplete="off">
                     </form>
+                    <button class="comment-add">등록</button>
+                    <button class="comment-cancle">취소</button>
+                    <button class="comment-delete">삭제</button>
+                    <button class="comment-change">수정</button>
                     <ul id="comments-list"></ul>
                 </div>
             </div>
@@ -229,34 +235,35 @@
 
         <div class="Content">
 
-            <div class="Top-Menu">
-                <div class="Item">
+            <div class="Right-Top-Menu">
+
+                <div class="Top-Menu-Item">
                     <div class="Button">All</div>
                 </div>
-                <div class="Item">
+                <div class="Top-Menu-Item">
                     <div class="Button">From Marcus Levin</div>
                 </div>
             </div>
 
             <!-- video.html 우측 영상 목록 세부 태그 -->
-            <div class="Videos">
+            <div class="Videos" id="Videos">
                 <div class="Video">
                     <div class="Thumbnail">
                         <div class="Images">
-                            <div class="VideoTime"></div>
-                            <div class="Thumbnail-Images"></div>
+                            <div class="Thumbnail-Images">
+                                <img src="img/image 1.png" alt="우측 영상 썸네일">
+                            </div>
+                            <div class="VideoTime">23:45</div>
                         </div>
                     </div>
-                    <div class="Video-Text">
+                    <div class="Video-Text"> Ep 6: Living to Serve | SEARCH ON
                         <div class="Channel-Desc">
-                            <div class="Channel-name"></div>
-                            <div class="Channel-view"></div>
+                            <div class="Channel-name">James Gouse</div>
+                            <div class="Channel-view">1M views . 3 years ago</div>
                         </div>
                     </div>
                 </div>
             </div>
-
-        </div>
 
     </aside>
 
@@ -264,6 +271,22 @@
 </body>
 <script src="js/location.js"></script>
 <script src="js/video_comment.js"></script>
+<script src="js/videoHtmlVideoRender.js"></script>
 
+<script>
+    // HTML 파싱된 후 videoPlyerRender() 함수를 실행하는 DOMContentLoaded 이벤트 핸들러를 등록
+    document.addEventListener('DOMContentLoaded', () => {
+        let url = window.location.search;
+        console.log(url)
+        let regex = /[^0-9]/g;
+        let result = url.replace(regex, "")
+        let id = parseInt(result);
 
+        videoPlyerRender(id).catch(error => {
+            console.error('에러:', error);
+        })
+    });
+</script>
+<script src="js/like.js"></script>
+<script src="js/subscription.js"></script>
 </html>

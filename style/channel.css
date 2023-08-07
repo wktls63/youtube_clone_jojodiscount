@@ -51,6 +51,8 @@
 .Channel-pro-img {
     border-radius: 80px;
     opacity: 0.6499999761581421;
+    width:80px;
+    height:80px;
 }
 
 .info {
@@ -393,3 +395,21 @@
     float: left;
 
 } */
+
+
+.List {
+    display: inline-flex;
+}
+
+.Play {
+    margin-left: 20px;
+    background-color: #181818;
+    cursor: pointer;
+}
+
+.Play-All {
+    margin-left: 20px;
+    color: #AAAAAA;
+    background-color: #181818;
+    cursor: pointer;
+}

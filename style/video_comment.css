@@ -1,18 +1,31 @@
+/* 초기 댓글들에 대한 css */
 .comments-container {
     max-width: 600px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 5px;
     font-family: Roboto, Arial;
 }
 
-#comment-input {
+.Comment-input {
     color: white;
     background-color: #181818;
     width: 500px;
     padding: 8px;
     margin-bottom: 8px;
+    color: #cccccc;
 }
 
+.Comment-Cancel {
+    float: right;
+    color: white;
+    background-color: #181818;
+}
+
+.Comment-Add {
+    float: right;
+    color: white;
+    background-color: #181818;
+}
 
 #post-comment {
     float: right;
@@ -39,7 +52,7 @@ button {
     background-color: #f0f0f0;
 }
 
-.comment-add {
+.Comment-Add {
     height: 34px;
     width: 58px;
     padding: 0%;
@@ -52,12 +65,12 @@ button {
     text-align: center;
 }
 
-.comment-add:hover {
+.Comment-Add:hover {
     background-color: gray;
     color: black;
 }
 
-.comment-cancle {
+.Comment-Cancel {
     height: 34px;
     width: 58px;
     padding: 0%;
@@ -70,43 +83,80 @@ button {
     text-align: center;
 }
 
-.comment-cancle:hover {
+.Comment-Cancel:hover {
     background-color: gray;
     color: black;
 }
 
-.comment-delete {
+
+
+/* 추가된 댓글들에 대한 css */
+
+
+/* 댓글 컨테이너 */
+.itemContainer {
+    margin-left: 5px;
+    display: flex;
+    gap: 20px;
+
+}
+
+.itemNameText {
+    font-size: 12px;
+    font-weight: bold;
+
+}
+
+.itemText {
+    margin-left: 45px;
+    width: 100%;
+
+
+}
+
+.likeContainer {
+    margin-left: 30px;
+}
+
+#likeElement {
+    margin-right: 20px;
+}
+
+/* 댓글 수정.삭제 버튼에대한 css */
+.itemDel {
     height: 34px;
-    width: 58px;
+    width: 30px;
     padding: 0%;
-    float: right;
-    background-color: white;
-    color: black;
+    background-color: #181818;
+    color: white;
     margin-left: 10px;
     border-radius: 20px;
     font-family: Roboto;
     text-align: center;
 }
 
-.comment-delete:hover {
+.item {
+    margin-bottom: 30px;
+}
+
+.itemDel:hover {
     background-color: gray;
     color: black;
 }
 
-.comment-change {
+.itemEdit {
     height: 34px;
-    width: 58px;
+    width: 30px;
     padding: 0%;
-    float: right;
-    background-color: white;
-    color: black;
-    margin-left: 10px;
+    background-color: #181818;
+    color: white;
+    margin-left: 30px;
     border-radius: 20px;
     font-family: Roboto;
     text-align: center;
 }
 
-.comment-change:hover {
+.itemEdit:hover {
     background-color: gray;
     color: black;
 }

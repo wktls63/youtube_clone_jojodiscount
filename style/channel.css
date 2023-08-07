@@ -1,3 +1,12 @@
+.mainpage {
+    scrollbar-width: none;
+    overflow: hidden;
+}
+
+.mainpage::-webkit-scrollbar {
+    display: none;
+}
+
 .Channel {
     width: Hug (1200px);
     height: Hug (286px);
@@ -5,8 +14,11 @@
     left: 240px;
     padding-top: 20px;
     background-color: #181818;
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> b8744e569119575bfe5eb50f8e50c6f32970e971
 }
 
 .Channel-cover {
@@ -297,6 +309,26 @@
     align-items: flex-start;
 }
 
+<<<<<<< HEAD
+.List {
+    display: inline-flex;
+}
+
+.Play {
+    margin-left: 20px;
+    background-color: #181818;
+    cursor: pointer;
+}
+
+.Play-All {
+    margin-left: 20px;
+    color: #AAAAAA;
+    background-color: #181818;
+    cursor: pointer;
+}
+
+=======
+>>>>>>> b8744e569119575bfe5eb50f8e50c6f32970e971
 /* .Xsamll-video {
     padding-right: 6px;
     display: flex;

@@ -12,49 +12,45 @@
     <link rel="stylesheet" href="style/video.css">
 </head>
 
-    <body>
+<body>
 
-        <header class="header">
-            <div class="Yt-Button">
-                <div class="Icon">
-                    <img class="hamburger" src="icon/hamburger.png" alt="">
-                </div>
-                <div class="logo">
-                    <img
-                        class="youtube-logo"
-                        onclick="newPage()"
-                        src="icon/Youtube-Logo.png"
-                        alt="">
-                </div>
+    <header class="header">
+        <div class="Yt-Button">
+            <div class="Icon">
+                <img class="hamburger" src="icon/hamburger.png" alt="">
             </div>
+            <div class="logo">
+                <img class="youtube-logo" onclick="newPage()" src="icon/Youtube-Logo.png" alt="">
+            </div>
+        </div>
 
-            <div class="searchbox">
-                <input class="search-bar" type="text" id="search-bar" placeholder="Search">
-                <button class="search-button" id="search-button">
-                    <img class="search-icon" src="icon/search.png" alt="">
-                    <div class="tooltip">Search</div>
-                </button>
-                <button class="voice-search-button">
-                    <img class="voice-search-icon" src="icon/mic.png" alt="">
-                    <div class="tooltip">Search with your voice</div>
-                </button>
-            </div>
+        <div class="searchbox">
+            <input class="search-bar" type="text" id="search-bar" placeholder="Search">
+            <button class="search-button" id="search-button">
+                <img class="search-icon" src="icon/search.png" alt="">
+                <div class="tooltip">Search</div>
+            </button>
+            <button class="voice-search-button">
+                <img class="voice-search-icon" src="icon/mic.png" alt="">
+                <div class="tooltip">Search with your voice</div>
+            </button>
+        </div>
 
-            <div class="Profile">
-                <div class="ProfileDetail">
-                    <img class="imgs" src="img/create.png">
-                </div>
-                <div class="ProfileDetail">
-                    <img class="imgs" src="img/apps.png">
-                </div>
-                <div class="ProfileDetail">
-                    <img class="imgs" src="img/notifications.png">
-                </div>
-                <div class="ProfileImg">
-                    <img class="profileimg" src="img/Profile.png">
-                </div>
+        <div class="Profile">
+            <div class="ProfileDetail">
+                <img class="imgs" src="img/create.png">
             </div>
-        </header>
+            <div class="ProfileDetail">
+                <img class="imgs" src="img/apps.png">
+            </div>
+            <div class="ProfileDetail">
+                <img class="imgs" src="img/notifications.png">
+            </div>
+            <div class="ProfileImg">
+                <img class="profileimg" src="img/Profile.png">
+            </div>
+        </div>
+    </header>
 
     <!-- 헤더를 아래 메인화면 부분 -->
     <!-- 사이드바 -->
@@ -354,5 +350,6 @@
         }) // 처음에는 모든 비디오를 표시
     });
 </script>
+<script src="js/channelLocation.js"></script>
 
 </html>

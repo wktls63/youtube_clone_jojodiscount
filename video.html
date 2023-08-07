@@ -245,24 +245,13 @@
                 </div>
             </div>
 
-            <!-- video.html 우측 영상 목록 세부 태그 -->
-            <div class="Videos" id="Videos">
-                <div class="Video">
-                    <div class="Thumbnail">
-                        <div class="Images">
-                            <div class="Thumbnail-Images">
-                                <img src="img/image 1.png" alt="우측 영상 썸네일">
-                            </div>
-                            <div class="VideoTime">23:45</div>
-                        </div>
+            <!-- 동영상 목록 -->
+            <div class="main-video">
+                <section class="video-grid" id="video-grid">
+                    <div class="video-preview" id="video-preview">
+                        <!-- 이곳에 videoRender.js -->
                     </div>
-                    <div class="Video-Text"> Ep 6: Living to Serve | SEARCH ON
-                        <div class="Channel-Desc">
-                            <div class="Channel-name">James Gouse</div>
-                            <div class="Channel-view">1M views . 3 years ago</div>
-                        </div>
-                    </div>
-                </div>
+                </section>
             </div>
 
     </aside>
@@ -285,6 +274,16 @@
         videoPlyerRender(id).catch(error => {
             console.error('에러:', error);
         })
+    });
+</script>
+<script>
+    // HTML 파싱된 후 displayVideoList() 함수를 실행하는 DOMContentLoaded 이벤트 핸들러를 등록
+    document.addEventListener('DOMContentLoaded', () => {
+        let url = window.location.search;
+
+        displayVideoList().catch(error => {
+            console.error('에러:', error);
+        }) // 처음에는 모든 비디오를 표시
     });
 </script>
 <script src="js/like.js"></script>

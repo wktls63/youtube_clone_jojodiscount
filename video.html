@@ -21,6 +21,7 @@
             </div>
             <div class="logo">
                 <img class="youtube-logo" onclick="newPage()" src="icon/Youtube-Logo.png" alt="">
+                <div class="tooltip">YouTube Home</div>
             </div>
         </div>
 
@@ -35,19 +36,21 @@
                 <div class="tooltip">Search with your voice</div>
             </button>
         </div>
-
         <div class="Profile">
             <div class="ProfileDetail">
-                <img class="imgs" src="img/create.png">
+                <img class="imgs" src="img/create.png" alt="">
+                <div class="tooltip">Create</div>
             </div>
             <div class="ProfileDetail">
-                <img class="imgs" src="img/apps.png">
+                <img class="imgs" src="img/apps.png" alt="">
+                <div class="tooltip">Apps</div>
             </div>
             <div class="ProfileDetail">
-                <img class="imgs" src="img/notifications.png">
+                <img class="imgs" src="img/notifications.png" alt="">
+                <div class="tooltip">Notifications</div>
             </div>
             <div class="ProfileImg">
-                <img class="profileimg" src="img/Profile.png">
+                <img class="profileimg" src="img/Profile.png" alt="">
             </div>
         </div>
 
@@ -65,7 +68,7 @@
                     <div class="Video-Info">
                         <div class="Title">Blind Woodturner: Turning passion into fine art</div>
                         <div class="Info">
-                            <div class="Info-text"></div>
+                            <div class="Info-text">576,969 views . Oct 8, 2021</div>
                             <div class="Top-Level">
                                 <!--좋아요 버튼-->
                                 <div class="like">
@@ -143,90 +146,15 @@
                         <input type="text" class="Comment-input" placeholder="Add a public comment...."
                             onkeypress="handleKeyPress(event)" autocomplete="off">
                     </form>
-                    <button class="Comment-Add">등록</button>
-                    <button class="Comment-Cancle" onclick="CancleComment()">취소</button>
+                    <button class="Comment-Cancel" onclick="CancelComment()">Delete</button>
+                    <button class="Comment-Add">Write</button>
                     <ul id="comments-list"></ul>
                 </div>
             </div>
 
             <div class="Comments">
-                <div class="Comment">
-                    <div class="profile-pic"></div>
-                    <div class="Comment-Content">
-                        <div class="User-Avatar">
-                            <img src="icon/james.png" alt="comment-user-avatar">
-                        </div>
-
-                        <div class="Comment-Details">
-                            <div class="Comment-Header">
-                                <span class="username">James Gouse</span>
-                                <span class="timestamp">8 hours ago</span>
-                            </div>
-                            <div class="Comment-Text">Wow, world is full of different skills</div>
-                            <div class="Comment-Toolbar">
-                                <div class="button">
-                                    <div class="like-container">
-                                        <div class="like">
-                                            <div class="liked">
-                                                <img src="svg/Liked.svg" alt="댓글 좋아요">
-                                            </div>
-                                        </div>
-                                        <div class="like-text">77</div>
-                                    </div>
-                                </div>
-
-                                <div class="button">
-                                    <div class="like">
-                                        <div class="liked">
-                                            <img src="svg/DisLiked.svg" alt="댓글 싫어요 ">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="Reply">REPLY</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <!--여기에 추가 댓글들 -->
             </div>
-
-            <div class="Comments">
-                <div class="Comment">
-                    <div class="profile-pic"></div>
-                    <div class="Comment-Content">
-                        <div class="User-Avatar">
-                            <img src="icon/alan.png" alt="comment-user-avatar">
-                        </div>
-                        <div class="Comment-Details">
-                            <div class="Comment-Header">
-                                <span class="username">Alan Cooper</span>
-                                <span class="timestamp">4 days ago</span>
-                            </div>
-                            <div class="Comment-Text">Can you provide? On January 2, 2022</div>
-                            <div class="Comment-Toolbar">
-                                <div class="button">
-                                    <div class="like-container">
-                                        <div class="like">
-                                            <div class="liked">
-                                                <img src="svg/Liked.svg" alt="댓글 좋아요">
-                                            </div>
-                                        </div>
-                                        <div class="like-text">53</div>
-                                    </div>
-                                </div>
-                                <div class="button">
-                                    <div class="like">
-                                        <div class="liked">
-                                            <img src="svg/DisLiked.svg" alt="댓글 싫어요 ">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="Reply">REPLY</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
     </main>
 
 

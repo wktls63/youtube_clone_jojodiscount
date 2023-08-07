@@ -21,6 +21,7 @@
             </div>
             <div class="logo">
                 <img class="youtube-logo" onclick="newPage()" src="icon/Youtube-Logo.png" alt="">
+                <div class="tooltip">YouTube Home</div>
             </div>
 
         </div>
@@ -37,23 +38,26 @@
         </div>
         <div class="Profile">
             <div class="ProfileDetail">
-                <img class="imgs" src="img/create.png">
+                <img class="imgs" src="img/create.png" alt="">
+                <div class="tooltip">Create</div>
             </div>
             <div class="ProfileDetail">
-                <img class="imgs" src="img/apps.png">
+                <img class="imgs" src="img/apps.png" alt="">
+                <div class="tooltip">Apps</div>
             </div>
             <div class="ProfileDetail">
-                <img class="imgs" src="img/notifications.png">
+                <img class="imgs" src="img/notifications.png" alt="">
+                <div class="tooltip">Notifications</div>
             </div>
             <div class="ProfileImg">
-                <img class="profileimg" src="img/Profile.png">
+                <img class="profileimg" src="img/Profile.png" alt="">
             </div>
         </div>
     </header>
 
 
     <div class="mainpage">
-        
+
         <!--------------사이드 바------------->
         <aside class="Sidebar">
             <div class="Top">
@@ -298,21 +302,21 @@
         <!----------------------------- 채널 영역 -------------------------------->
         <nav class="Channel">
 
-            <img class="Channel-cover" src="/img/channel-cover.png">
+            <img class="Channel-cover" id="Channel-cover" src="/img/channel-cover.png">
 
             <div class="Channel-Title">
                 <div class="Profile">
                     <div class="Pic">
-                        <img class="Channel-pro-img" src="/img/Channel-pro-img.png">
+                        <img class="Channel-pro-img" id="Channel-pro-img" src="/img/Channel-pro-img.png">
                     </div>
                     <div class="info">
-                        <div class="Name">Marcus Levin</div>
-                        <div class="subscribers">1.2M</div>
+                        <div class="Name" id="Name">Marcus Levin</div>
+                        <div class="subscribers" id="subscribers">1.2M subscribers</div>
                     </div>
                 </div>
                 <button id="Subscribes-Btn" class="Subscribes-Btn" onclick="toggleSubscription()"
-                        onclick="handleClick()">SUBSCRIBES
-                    </button>
+                    onclick="handleClick()">SUBSCRIBES
+                </button>
             </div>
             <div class="Channel-Toolbar">
 
@@ -357,45 +361,48 @@
                 <article class="Play-Lists">
                     <div class="Play-List">
                         <div class="Content">
-                            <div class="Play-list">
-                                <p>Search On '21</p>
-                                <div class="Title"></div>
-                                <div class="Play-Btn">
-                                    <div class="Sidebar-Icons/play"></div>
-                                    <div class="Play-All"></div>
+                            <div class="List">
+                                <div class="List-Title">
+                                    <p>Search On '21</p>
                                 </div>
+                                <div class="Play">
+                                    <img src="/icon/play.png">
+                                </div>
+                                <div class="Play-All">PLAY ALL</div>
                             </div>
-                            <div class="Video-card" id="Video-card">       
+                            <div class="Video-card" id="Video-card">
                             </div>
                         </div>
                     </div>
 
                     <div class="Play-List">
                         <div class="Content">
-                            <div class="Play-list">
-                                <p>Search On '21</p>
-                                <div class="Title"></div>
-                                <div class="Play-Btn">
-                                    <div class="Sidebar-Icons/play"></div>
-                                    <div class="Play-All"></div>
+                            <div class="List">
+                                <div class="List-Title">
+                                    <p>Search On '21</p>
                                 </div>
+                                <div class="Play">
+                                    <img src="/icon/play.png">
+                                </div>
+                                <div class="Play-All">PLAY ALL</div>
                             </div>
-                            <div class="Video-card" id="Video-card-two">       
+                            <div class="Video-card" id="Video-card-two">
                             </div>
                         </div>
                     </div>
 
                     <div class="Play-List">
                         <div class="Content">
-                            <div class="Play-list">
-                                <p>Search On '21</p>
-                                <div class="Title"></div>
-                                <div class="Play-Btn">
-                                    <div class="Sidebar-Icons/play"></div>
-                                    <div class="Play-All"></div>
+                            <div class="List">
+                                <div class="List-Title">
+                                    <p>Search On '21</p>
                                 </div>
+                                <div class="Play">
+                                    <img src="/icon/play.png">
+                                </div>
+                                <div class="Play-All">PLAY ALL</div>
                             </div>
-                            <div class="Video-card" id="Video-card-three">       
+                            <div class="Video-card" id="Video-card-three">
                             </div>
                         </div>
                     </div>
@@ -413,10 +420,15 @@
 <script>
     // HTML 파싱된 후 channelVideoRender() 함수를 실행하는 DOMContentLoaded 이벤트 핸들러를 등록
     document.addEventListener('DOMContentLoaded', () => {
-        channelVideoRender().catch(error => {
+        let url = window.location.search;
+        let locd = url.substring(4, 10);
+        let id = String(locd);
+        console.log(id)
+        channelVideoRender(id).catch(error => {
             console.error('에러:', error);
         })
     });
 </script>
 <script src="js/subscription.js"></script>
+
 </html>

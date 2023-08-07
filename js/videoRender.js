@@ -6,6 +6,10 @@ function formatViews(views) {
   return views.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
+function channelPage() {
+  window.location.href = 'channel.html'
+}
+
 
 // 비디오 리스트를 가져오는 함수
 async function getVideoList() {
@@ -82,11 +86,11 @@ async function displayVideoList(searchQuery = '') {
             </div>
             <div class="video-info-grid">
               <div class="channel-picture">
-                <img class="profile-picture" alt="Thumbnail" src="icon/alan.png" />
+                <img class="profile-picture" onclick='channelPage()' alt="Thumbnail" src="icon/alan.png" />
               </div>
               <div class="video-info">
                 <p class="video-title">${videoInfo.video_title}</p>
-                <p class="video-author">Channel: ${videoInfo.video_channel}</p>
+                <p class="video-author" onclick='channelPage()'>Channel: ${videoInfo.video_channel}</p>
                 <p class="video-stats">조회수: ${formattedViews} 회 &#183; ${videoInfo.upload_date}</p>
               </div>
             </div>

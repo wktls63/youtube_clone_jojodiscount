@@ -1,7 +1,11 @@
+.Vcontainer{
+    display:flex;
+    flex-direction: row;
+}
+
 .Primary {
-    display: flex;
-    width: 664px;
-    padding: 10px 0px 0px 24px;
+    width: 50%;
+    padding: 0px 0px 0px 0px;
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-start;
@@ -98,12 +102,13 @@
 }
 
 .Secondary {
-    /* display: flex; */
-    position: absolute;
+    display: flex;
+    position: static;
     top: 56px;
     right: 164px;
     width: 426px;
     height: 968px;
+    margin-left:10%;
     flex-direction: column;
     /* justify-content: flex-end; */
     align-items: center;
@@ -113,7 +118,7 @@
 
 .Content {
     display: flex;
-    padding: 24px 24px 0px 0px;
+    /* padding: 24px 24px 0px 0px; */
     flex-direction: column;
     align-items: flex-start;
 }

@@ -62,21 +62,17 @@
 
 
 .Menu {
-    padding-top: 10px;
-    padding-bottom: 5px;
     margin-top: 5px;
     /* margin-left: 10px; */
-    
     width: 210px;
     height: 40px;
     border: 0px;
     background-color: #212121FF;
     color: white;
     font-size: 16px;
-
-    background-color: #212121;
-    padding: 12px 12px 12px 24px;
+    padding-top: 8px;
 }
+
 
 .Menu:hover {
     background-color: rgb(53, 53, 53);
